@@ -452,7 +452,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
     </div>
     <div class="arch-wrap">
       <div class="arch">
-        <video id="introVideo" src="video/intro.mp4" poster="video/intro-poster.jpg" playsinline preload="auto"></video>
+        <video id="introVideo" src="video/intro.mp4" poster="video/intro-poster.jpg" muted playsinline preload="auto"></video>
         <img class="kiss" id="kiss" src="video/intro-kiss.jpg" alt="">
       </div>
     </div>
@@ -764,7 +764,7 @@ function setLang(l) {
 }
 let saved = null; try { saved = localStorage.getItem('kxv-lang'); } catch (e) {}
 setLang(saved || ((navigator.language || '').toLowerCase().startsWith('es') ? 'es' : 'en'));
-$$('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+$$('.lang button').forEach(b => b.addEventListener('click', () => { setLang(b.dataset.lang); updateSound(); }));
 
 /* ---------- petals ---------- */
 const petals = $('#petals');
@@ -797,7 +797,7 @@ if (!reduce) drawS();
 
 /* ---------- background music ---------- */
 const bgm = $('#bgm'), musicBtn = $('#musicBtn');
-const MUSIC_VOL = .45, DUCK_VOL = .06;
+const MUSIC_VOL = .45;
 let musicOn = true; try { musicOn = localStorage.getItem('kxv-music') !== 'off'; } catch (e) {}
 let musicStarted = false;
 bgm.volume = 0;
@@ -810,39 +810,42 @@ function startMusic() {
   musicStarted = true; bgm.volume = 0;
   const p = bgm.play();
   if (p && p.catch) p.catch(() => { musicStarted = false; });
-  fadeTo((video.paused || video.ended || video.muted) ? MUSIC_VOL : DUCK_VOL, 3.5);
-  setTimeout(paintMusicBtn, 200);
+  fadeTo(MUSIC_VOL, 3.5);
+  setTimeout(paintAudioBtns, 200);
 }
 function paintMusicBtn() {
   musicBtn.classList.toggle('on', musicOn && !bgm.paused);
   musicBtn.classList.toggle('off', !musicOn);
 }
-musicBtn.addEventListener('click', () => {
+function toggleMusic() {
   musicOn = !musicOn;
   try { localStorage.setItem('kxv-music', musicOn ? 'on' : 'off'); } catch (e) {}
   if (musicOn) { musicStarted = false; startMusic(); }
-  else { fadeTo(0, .7); setTimeout(() => { if (!musicOn) { bgm.pause(); musicStarted = false; paintMusicBtn(); } }, 760); }
-  paintMusicBtn();
-});
+  else { fadeTo(0, .7); setTimeout(() => { if (!musicOn) { bgm.pause(); musicStarted = false; paintAudioBtns(); } }, 760); }
+  paintAudioBtns();
+}
+function paintAudioBtns() { paintMusicBtn(); updateSound(); }
+musicBtn.addEventListener('click', toggleMusic);
 paintMusicBtn();
 
 /* ---------- intro video + blurred bg ---------- */
 const video = $('#introVideo'), bg = $('#introBg'), bgx = bg.getContext('2d'), soundBtn = $('#soundBtn');
 const poster = new Image(); poster.src = 'video/intro-poster.jpg'; poster.onload = () => bgx.drawImage(poster, 0, 0, 90, 160);
 (function loopBg() { if (!video.paused && !video.ended) bgx.drawImage(video, 0, 0, 90, 160); requestAnimationFrame(loopBg); })();
-function updateSound() { soundBtn.classList.toggle('muted', video.muted); $('.lbl', soundBtn).textContent = video.muted ? (root.lang === 'es' ? 'Sin sonido' : 'Sound off') : (root.lang === 'es' ? 'Sonido' : 'Sound on'); }
-soundBtn.addEventListener('click', () => { video.muted = !video.muted; if (video.paused) playIntro(); updateSound(); });
+function updateSound() {
+  const on = musicOn && !bgm.paused;
+  soundBtn.classList.toggle('muted', !on);
+  $('.lbl', soundBtn).textContent = root.lang === 'es' ? (on ? 'Música' : 'Sin música') : (on ? 'Music on' : 'Music off');
+}
+soundBtn.addEventListener('click', toggleMusic);
+updateSound();
 function playIntro() {
   video.currentTime = 0;
   if (hasGsap) gsap.to('#kiss', { opacity: 0, duration: .4 });
   const p = video.play();
-  if (p && p.catch) p.catch(() => { video.muted = true; video.play(); updateSound(); });
-  updateSound();
+  if (p && p.catch) p.catch(() => {});
 }
-video.addEventListener('play', () => { if (!video.muted) fadeTo(DUCK_VOL, .8); });
-video.addEventListener('pause', () => { if (musicOn && !bgm.paused) fadeTo(MUSIC_VOL, 2); });
 video.addEventListener('ended', () => {
-  if (musicOn && !bgm.paused) fadeTo(MUSIC_VOL, 3);
   if (hasGsap) gsap.to('#kiss', { opacity: 1, duration: 1.2, ease: 'power2.out' }); else $('#kiss').style.opacity = 1;
 });
 
@@ -879,8 +882,6 @@ $('#seal').addEventListener('click', openEnvelope);
 if (/[?&]open\b/.test(location.search)) addEventListener('load', openEnvelope);
 function openEnvelope() {
   if (opened) return; opened = true;
-  // unlock audio within the gesture
-  video.muted = false; video.play().then(() => { video.pause(); video.currentTime = 0; }).catch(() => {});
   startMusic();
   const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } });
   tl.to('.gate-hint, .gate-top', { opacity: 0, duration: .4 })
@@ -1066,7 +1067,6 @@ if (!reduce) ScrollTrigger.create({ trigger: '#finale', start: 'top 45%', onEnte
 ScrollTrigger.create({ trigger: '#finale', start: 'top 60%', end: 'bottom top', onToggle: s => { sparkleBoost = s.isActive ? 2 : .7; } });
 
 $('#replayBtn').addEventListener('click', () => {
-  video.muted = false;
   if (lenis) lenis.scrollTo(0, { duration: 2.4, onComplete: playIntro }); else { scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(playIntro, 900); }
 });
 
