@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kimberly's XV · Gracias</title>
+<meta name="description" content="A thank-you from Kimberly for celebrating her XV años — August 29, 2026.">
+<meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noimageindex">
+<meta property="og:title" content="Kimberly's XV · Gracias">
+<meta property="og:description" content="Thank you for being part of my fifteen. / Gracias por ser parte de mis XV.">
+<meta property="og:image" content="img/ed-101.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%23F2B9C8'/><text x='50' y='70' font-size='62' text-anchor='middle' fill='%23B8893F' font-family='serif' font-style='italic'>K</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="video/intro-poster.jpg">
+<style>
+:root{
+  --ivory:#FBF6F1; --paper:#F7EFE8; --blush:#F6D8DE; --pink:#F2B9C8; --rose:#D98FA5;
+  --rosegold:#C9967A; --gold:#C8A15A; --gold-hi:#F1D79A; --plum:#2A1520; --plum-2:#3B1F2C;
+  --ink:#2B1B22; --muted:#7A6269;
+  --script:'Great Vibes',cursive; --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+  --gold-grad:linear-gradient(100deg,#9C7535 0%,#F1D79A 28%,#C39A52 52%,#FBE7B5 72%,#A9803C 100%);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ivory);color:var(--ink);-webkit-font-smoothing:antialiased}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{font-family:var(--sans);font-weight:300;overflow-x:hidden;background:var(--ivory)}
+body.locked{overflow:hidden;height:100vh}
+img,video{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+html[lang=en] .es, html[lang=es] .en{display:none!important}
+
+/* ---------- shared ---------- */
+.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.38em;text-transform:uppercase;font-weight:400;color:var(--rosegold)}
+.script{font-family:var(--script);font-weight:400;line-height:1}
+.gold-text{background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s linear infinite}
+@keyframes shimmer{to{background-position:-200% 0}}
+.h-display{font-family:var(--serif);font-weight:400;line-height:.95;letter-spacing:-.01em}
+.h-display em{font-style:italic;color:var(--rose)}
+.chapter-no{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--rosegold);display:flex;align-items:center;gap:14px}
+.chapter-no::after{content:"";width:64px;height:1px;background:currentColor;opacity:.6}
+.frame{position:relative;overflow:hidden;border-radius:6px;background:#e9dcd4}
+.frame img{width:100%;height:100%;object-fit:cover}
+[data-lb]{cursor:zoom-in}
+.grain{position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");animation:grain 1s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+#sparkles{position:fixed;inset:0;z-index:80;pointer-events:none;mix-blend-mode:screen}
+
+/* top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:120;display:flex;justify-content:space-between;align-items:center;padding:22px 34px;pointer-events:none;mix-blend-mode:difference;color:#fff}
+.topbar > *{pointer-events:auto}
+.brand{font-family:var(--script);font-size:30px}
+.lang{display:flex;gap:4px;font-size:12px;letter-spacing:.2em;border:1px solid rgba(255,255,255,.6);border-radius:99px;padding:4px}
+.lang button{padding:6px 12px;border-radius:99px;transition:background .3s,color .3s}
+.lang button.on{background:#fff;color:#000}
+.progress{position:fixed;left:0;top:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--gold-grad);z-index:96}
+
+/* cursor */
+.cursor,.cursor-ring{position:fixed;top:0;left:0;z-index:200;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%)}
+.cursor{width:6px;height:6px;background:var(--gold)}
+.cursor-ring{width:38px;height:38px;border:1px solid rgba(200,161,90,.7);display:grid;place-items:center;transition:width .35s var(--ease),height .35s var(--ease),background .35s,border-color .35s}
+.cursor-ring span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .2s}
+.cursor-ring.view{width:86px;height:86px;background:rgba(42,21,32,.55);border-color:transparent;backdrop-filter:blur(4px)}
+.cursor-ring.view span{opacity:1}
+@media (hover:none),(max-width:899px){.cursor,.cursor-ring{display:none}}
+
+/* ---------- GATE / envelope ---------- */
+#gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;overflow:hidden;
+  background:
+   radial-gradient(40% 35% at 8% 12%,rgba(160,190,160,.35),transparent 70%),
+   radial-gradient(35% 30% at 92% 88%,rgba(160,190,160,.3),transparent 70%),
+   radial-gradient(30% 30% at 95% 10%,rgba(233,150,175,.45),transparent 70%),
+   radial-gradient(30% 34% at 4% 92%,rgba(233,150,175,.45),transparent 70%),
+   radial-gradient(60% 60% at 50% 50%,#FDF1F3,#F7DDE3 80%)}
+.petal{position:absolute;top:-8vh;width:var(--s);height:calc(var(--s)*.8);border-radius:100% 0 100% 0;background:linear-gradient(135deg,#fff2f5,#F2A9BD);opacity:.85;animation:fall var(--d) linear var(--delay) infinite;filter:drop-shadow(0 2px 3px rgba(180,90,120,.2))}
+@keyframes fall{0%{transform:translate3d(0,0,0) rotate(0)}100%{transform:translate3d(var(--x),116vh,0) rotate(var(--r))}}
+.gate-inner{position:relative;display:flex;flex-direction:column;align-items:center;gap:34px}
+.gate-top{text-align:center}
+.gate-top .script{font-size:64px;color:var(--rose)}
+.envelope{position:relative;width:min(640px,86vw);aspect-ratio:1.52;perspective:1800px;filter:drop-shadow(0 40px 50px rgba(150,70,100,.28))}
+.env-back{position:absolute;inset:0;border-radius:10px;background:linear-gradient(#EDA8BB,#F4BCCB)}
+.env-letter{position:absolute;left:6%;right:6%;top:5%;height:88%;z-index:2;border-radius:6px;background:var(--ivory);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 2px 20px rgba(0,0,0,.08);padding:20px;
+  background-image:radial-gradient(circle at 50% 0,rgba(242,185,200,.25),transparent 60%)}
+.env-letter .script{font-size:clamp(52px,7vw,84px)}
+.env-letter p{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);margin-top:8px}
+.env-front{position:absolute;inset:0;z-index:3;border-radius:10px;overflow:hidden;pointer-events:none}
+.env-front::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,#F6C4D1,#F0B0C1);clip-path:polygon(0 0,50% 56%,100% 0,100% 100%,0 100%)}
+.env-front::after{content:"";position:absolute;inset:0;background:linear-gradient(20deg,rgba(0,0,0,.06),transparent 50%);clip-path:polygon(0 100%,50% 50%,100% 100%)}
+.env-flap{position:absolute;left:0;right:0;top:0;height:62%;z-index:4;transform-origin:50% 0;transform-style:preserve-3d}
+.env-flap::before{content:"";position:absolute;inset:0;background:linear-gradient(#F9D0DA,#EFA8BA);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:10px 10px 0 0}
+.seal{position:absolute;left:50%;top:62%;z-index:6;width:132px;height:132px;transform:translate(-50%,-50%);border-radius:50%;cursor:pointer;filter:drop-shadow(0 8px 12px rgba(120,40,70,.35))}
+.seal svg{width:100%;height:100%;overflow:visible}
+.seal::after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid rgba(200,161,90,.7);animation:ping 2.2s var(--ease) infinite}
+@keyframes ping{0%{transform:scale(.85);opacity:1}100%{transform:scale(1.35);opacity:0}}
+.gate-hint{font-family:var(--sans);font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--rosegold);display:flex;align-items:center;gap:14px}
+.gate-hint::before,.gate-hint::after{content:"";width:40px;height:1px;background:currentColor}
+
+/* ---------- INTRO ---------- */
+#intro{position:relative;height:100vh;min-height:680px;overflow:hidden;background:var(--plum);color:var(--ivory)}
+#introBg{position:absolute;inset:-10%;width:120%;height:120%;filter:blur(38px) saturate(1.25) brightness(.72);transform:scale(1.1)}
+#intro::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 45%,transparent,rgba(26,10,18,.85));pointer-events:none}
+.intro-grid{position:relative;z-index:2;height:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 5vw}
+.intro-side{display:flex;flex-direction:column;gap:18px}
+.intro-side.left{align-items:flex-start}
+.intro-side.right{align-items:flex-end;text-align:right}
+.intro-side .h-display{font-size:clamp(34px,3.6vw,62px)}
+.intro-side .h-display em{color:var(--gold-hi)}
+.arch{position:relative;height:min(76vh,860px);aspect-ratio:9/16;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 50px 120px rgba(0,0,0,.55)}
+.arch-wrap{position:relative;padding:12px;border-radius:999px 999px 26px 26px;border:1px solid rgba(241,215,154,.55)}
+.arch-wrap::before{content:"";position:absolute;inset:-12px;border-radius:999px 999px 34px 34px;border:1px solid rgba(241,215,154,.22)}
+.arch video,.arch img{width:100%;height:100%;object-fit:cover}
+.arch .kiss{position:absolute;inset:0;opacity:0}
+.intro-gracias{position:absolute;left:0;right:0;margin:auto;width:max-content;bottom:4vh;z-index:3;font-size:clamp(110px,15vw,250px);white-space:nowrap;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5));padding:0 .2em}
+.sound{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:10px 18px;transition:background .3s}
+.sound:hover{background:rgba(255,255,255,.1)}
+.bars{display:flex;gap:2px;align-items:flex-end;height:12px}
+.bars i{width:2px;background:var(--gold-hi);height:30%;animation:bar .9s ease-in-out infinite alternate}
+.bars i:nth-child(2){animation-delay:.2s}.bars i:nth-child(3){animation-delay:.4s}.bars i:nth-child(4){animation-delay:.1s}
+.muted .bars i{animation:none;height:20%}
+@keyframes bar{to{height:100%}}
+.scroll-cue{position:absolute;right:5vw;left:auto;bottom:40px;transform:none!important;z-index:4;transform:translateX(-50%);font-size:10px;letter-spacing:.4em;text-transform:uppercase;opacity:.7;display:none}
+.scroll-cue::after{content:"";display:block;width:1px;height:38px;margin:10px auto 0;background:linear-gradient(var(--gold-hi),transparent);animation:cue 1.8s var(--ease) infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- LETTER ---------- */
+#letter{position:relative;padding:18vh 7vw 16vh;display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:center;background:var(--ivory)}
+.letter-photo{position:relative;height:84vh;border-radius:999px 999px 10px 10px;overflow:hidden}
+.letter-photo img{width:100%;height:118%;object-fit:cover}
+.letter-photo-tag{position:absolute;left:-28px;bottom:70px;background:var(--ivory);padding:14px 22px;border-radius:2px;font-family:var(--serif);font-style:italic;font-size:18px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.letter-body .h-display{font-size:clamp(46px,5vw,86px);margin:22px 0 38px}
+.letter-text p{font-family:var(--serif);font-size:clamp(21px,1.75vw,29px);line-height:1.5;color:var(--ink);margin-bottom:.9em}
+.letter-text .w{display:inline-block;white-space:pre}
+.signature{font-size:clamp(70px,7vw,120px);color:var(--rose);margin-top:18px;display:inline-block;padding-right:.3em}
+
+/* ---------- MARQUEE ---------- */
+.marquee{overflow:hidden;padding:5vh 0;background:var(--ivory);border-top:1px solid rgba(201,150,122,.25);border-bottom:1px solid rgba(201,150,122,.25)}
+.marquee-row{display:flex;white-space:nowrap;will-change:transform}
+.marquee-row span{font-family:var(--serif);font-size:clamp(70px,10vw,170px);line-height:1.05;padding-right:.4em;font-style:italic}
+.marquee-row span.o{color:transparent;-webkit-text-stroke:1px var(--rosegold);font-style:normal}
+.marquee-row span.s{font-family:var(--script);color:var(--rose);font-style:normal}
+
+/* ---------- CHAPTER: getting ready ---------- */
+.chapter{position:relative}
+#ready{padding:16vh 6vw 20vh;background:var(--paper)}
+.ch-head{display:flex;justify-content:space-between;align-items:flex-end;gap:5vw;margin-bottom:10vh}
+.ch-head .h-display{font-size:clamp(56px,7.4vw,130px)}
+.ch-head p{max-width:380px;font-family:var(--serif);font-size:22px;line-height:1.45;color:var(--muted);font-style:italic}
+.collage{position:relative;height:150vh}
+.collage .frame{position:absolute;box-shadow:0 30px 60px rgba(60,20,40,.14)}
+.c1{left:0;top:0;width:30vw;height:45vw}
+.c2{left:34vw;top:14vh;width:34vw;height:22.6vw}
+.c3{right:0;top:-4vh;width:22vw;height:30vw}
+.c4{left:40vw;top:68vh;width:26vw;height:39vw}
+.c5{left:6vw;top:92vh;width:30vw;height:20vw}
+.c6{right:2vw;top:82vh;width:24vw;height:16vw}
+.collage .note{position:absolute;right:4vw;top:58vh;width:22vw;font-family:var(--script);font-size:clamp(34px,3vw,56px);color:var(--rose);line-height:1.15;transform:rotate(-4deg)}
+
+/* ---------- MASS ---------- */
+#mass{background:var(--ivory)}
+.mass-stage{position:relative;height:100vh;overflow:hidden}
+.mass-title{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:9vh 0 4vh;text-align:center;z-index:1}
+.mass-title .h-display{font-size:clamp(56px,7vw,120px)}
+.mass-img{position:absolute;inset:0;z-index:2;clip-path:inset(34% 38% 12% 38% round 400px 400px 14px 14px);will-change:clip-path}
+.mass-img img{width:100%;height:100%;object-fit:cover;transform:scale(1.35)}
+.mass-img::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(30,12,20,.75));opacity:0;transition:none}
+.mass-quote{position:absolute;left:6vw;bottom:10vh;z-index:3;color:var(--ivory);max-width:720px;opacity:0}
+.mass-quote .h-display{font-size:clamp(40px,4.4vw,78px)}
+.mass-quote .h-display em{color:var(--gold-hi)}
+.mass-quote .eyebrow{color:var(--gold-hi)}
+.mass-side{position:absolute;z-index:1;width:15vw;aspect-ratio:2/3;border-radius:4px;overflow:hidden}
+.mass-side.l{left:7vw;top:30vh}
+.mass-side.r{right:7vw;top:36vh;aspect-ratio:3/2;width:19vw}
+
+/* ---------- PORTRAITS horizontal ---------- */
+#portraits{position:relative;background:var(--plum);color:var(--ivory);overflow:hidden}
+.h-track{display:flex;align-items:center;gap:4vw;height:100vh;padding:0 6vw;width:max-content;will-change:transform}
+.h-intro{width:40vw;flex-shrink:0;padding-right:2vw}
+.h-intro .h-display{font-size:clamp(60px,7vw,124px);margin:26px 0}
+.h-intro .h-display em{color:var(--gold-hi)}
+.h-intro p{font-family:var(--serif);font-style:italic;font-size:22px;color:rgba(251,246,241,.7);max-width:420px;line-height:1.45}
+.h-item{position:relative;flex-shrink:0}
+.h-item .frame{height:var(--h,66vh);aspect-ratio:var(--ar,2/3);border-radius:3px;background:#3a2530}
+.h-item .frame img{width:118%;max-width:none;height:100%;margin-left:-9%}
+.h-item.up{align-self:flex-start;margin-top:10vh}
+.h-item.down{align-self:flex-end;margin-bottom:9vh}
+.h-cap{position:absolute;left:0;bottom:-34px;font-family:var(--serif);font-style:italic;font-size:17px;color:rgba(251,246,241,.6);white-space:nowrap}
+.h-item.up .h-cap{bottom:auto;top:calc(var(--h,66vh) + 12px)}
+.h-item.down .h-cap{bottom:auto;top:-34px}
+.h-outro{width:36vw;flex-shrink:0;text-align:center}
+.h-outro .script{font-size:clamp(80px,8vw,150px)}
+.h-bar{position:absolute;left:6vw;right:6vw;bottom:34px;height:1px;background:rgba(255,255,255,.15)}
+.h-bar i{position:absolute;inset:0;transform-origin:0 50%;transform:scaleX(0);background:var(--gold-hi)}
+
+/* ---------- XV ---------- */
+#xv{position:relative;height:100vh;overflow:hidden;background:var(--ivory);display:grid;place-items:center}
+.xv-word{font-family:var(--serif);font-weight:600;font-size:52vw;line-height:.8;letter-spacing:-.04em;background:url(img/sm/ed-207.jpg) 50% 40%/cover;-webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
+.xv-sub{position:absolute;bottom:9vh;left:0;right:0;text-align:center}
+.xv-sub .h-display{font-size:clamp(34px,3.4vw,58px)}
+
+/* ---------- TRADITIONS ---------- */
+#traditions{padding:16vh 6vw;background:var(--ivory)}
+#traditions .ch-head{margin-bottom:8vh}
+.trad-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2vw;perspective:1200px}
+.trad{position:relative;transform-style:preserve-3d;transition:transform .5s var(--ease)}
+.trad:nth-child(even){margin-top:12vh}
+.trad .frame{aspect-ratio:3/4;border-radius:999px 999px 6px 6px;box-shadow:0 30px 60px rgba(60,20,40,.14)}
+.trad h3{font-family:var(--serif);font-weight:500;font-size:30px;margin:22px 0 6px}
+.trad p{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--muted);line-height:1.4}
+.trad .num{position:absolute;top:14px;right:14px;z-index:2;font-family:var(--serif);font-style:italic;font-size:15px;color:#fff;background:rgba(42,21,32,.45);backdrop-filter:blur(6px);width:40px;height:40px;border-radius:50%;display:grid;place-items:center}
+
+/* ---------- WALTZ stack ---------- */
+#waltz{position:relative;background:linear-gradient(#FBF6F1,#F4E6E1)}
+.waltz-stage{height:100vh;display:grid;grid-template-columns:.7fr 1.3fr;align-items:center;gap:4vw;padding:0 6vw;overflow:hidden}
+.waltz-copy .h-display{font-size:clamp(60px,7vw,126px);margin:24px 0}
+.waltz-copy p{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.5;color:var(--muted);max-width:420px}
+.waltz-count{margin-top:34px;font-family:var(--serif);font-size:18px;color:var(--rosegold)}
+.waltz-count b{font-weight:500;font-size:46px;color:var(--ink);font-style:italic}
+.stack{position:relative;height:74vh}
+.stack-card{position:absolute;inset:0;margin:auto;width:100%;height:auto;aspect-ratio:3/2;max-height:74vh;background:#fff;padding:14px 14px 58px;box-shadow:0 30px 80px rgba(60,20,40,.22);border-radius:2px;transform-origin:50% 100%}
+.stack-card .frame{width:100%;height:100%;border-radius:1px}
+.stack-card figcaption{position:absolute;left:18px;bottom:14px;font-family:'Caveat',cursive;font-size:28px;color:var(--ink)}
+
+/* ---------- SURPRISE ---------- */
+#surprise{position:relative;padding:18vh 6vw;background:#1B0D14;color:var(--ivory);overflow:hidden;--mx:50%;--my:40%}
+#surprise::before{content:"";position:absolute;inset:0;background:radial-gradient(420px 420px at var(--mx) var(--my),rgba(242,185,200,.28),transparent 70%);pointer-events:none;z-index:0}
+.beams{position:absolute;inset:-20%;background:conic-gradient(from 0deg at 50% -10%,transparent 0 40deg,rgba(242,185,200,.08) 45deg,transparent 52deg 110deg,rgba(241,215,154,.07) 118deg,transparent 126deg 360deg);animation:spin 14s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.surprise-head{position:relative;z-index:1;text-align:center;margin-bottom:10vh}
+.big-letters{font-family:var(--serif);font-size:clamp(80px,12vw,220px);line-height:.9;display:flex;justify-content:center;flex-wrap:wrap}
+.big-letters span{display:inline-block;will-change:transform}
+.big-letters .it{font-style:italic;color:var(--pink)}
+.surprise-row{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.2fr 1fr;gap:3vw;align-items:center}
+.surprise-row .frame{aspect-ratio:3/2;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.surprise-row .frame:nth-child(1){transform:rotate(-5deg)}
+.surprise-row .frame:nth-child(2){aspect-ratio:4/5}
+.surprise-row .frame:nth-child(3){transform:rotate(4deg)}
+
+/* ---------- HORA LOCA ---------- */
+#party{position:relative;padding:16vh 6vw 18vh;background:#120A10;color:#fff;overflow:hidden}
+.blob{position:absolute;width:50vw;height:50vw;border-radius:50%;filter:blur(90px);opacity:.35;pointer-events:none}
+.blob.a{background:#ff3fa4;left:-15vw;top:-10vw;animation:drift 12s ease-in-out infinite alternate}
+.blob.b{background:#3fd0ff;right:-15vw;top:30%;animation:drift 15s ease-in-out infinite alternate-reverse}
+.blob.c{background:#9d4dff;left:30%;bottom:-25vw;animation:drift 18s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(8vw,6vw) scale(1.2)}}
+.neon{position:relative;z-index:1;text-align:center;font-family:var(--serif);font-style:italic;font-size:clamp(90px,13vw,240px);line-height:.9;color:#fff;text-shadow:0 0 8px #fff,0 0 22px #ff5fb4,0 0 46px #ff2fa0,0 0 90px #ff2fa0;animation:flicker 5s infinite}
+@keyframes flicker{0%,18%,22%,62%,64%,100%{opacity:1}20%,63%{opacity:.35}}
+.neon-sub{position:relative;z-index:1;text-align:center;font-size:12px;letter-spacing:.4em;text-transform:uppercase;margin:18px 0 9vh;color:#ffc3e4}
+.bento{position:relative;z-index:1;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:15vw;gap:1.2vw}
+.bento .frame{border-radius:10px;background:#222;transition:box-shadow .4s,transform .5s var(--ease)}
+.bento .frame:hover{box-shadow:0 0 0 2px #ff7cc4,0 0 50px rgba(255,80,170,.55);transform:translateY(-6px)}
+.b1{grid-column:1/4;grid-row:span 2}.b2{grid-column:4/7}.b3{grid-column:4/5}.b4{grid-column:5/7}.b5{grid-column:1/3}.b6{grid-column:3/7}
+
+/* ---------- FAMILY polaroids ---------- */
+#family{position:relative;padding:14vh 6vw 10vh;background:
+  radial-gradient(70% 60% at 50% 50%,#F8EEE7,#EFDFD5);overflow:hidden}
+#family .ch-head{position:relative;z-index:3}
+.table{position:relative;height:118vh}
+.pol{position:absolute;width:clamp(220px,21vw,360px);background:#fff;padding:12px 12px 56px;box-shadow:0 18px 40px rgba(60,20,40,.22);border-radius:2px;will-change:transform}
+.pol .frame{aspect-ratio:1;border-radius:1px}
+.pol .frame img{pointer-events:none}
+.pol figcaption{position:absolute;left:0;right:0;bottom:12px;text-align:center;font-family:'Caveat',cursive;font-size:28px;color:#3a2a30}
+.pol.grab{cursor:grab}.pol.grabbing{cursor:grabbing}
+.drag-hint{position:absolute;left:6vw;bottom:5vh;z-index:3;font-family:'Caveat',cursive;font-size:30px;color:var(--rose);transform:rotate(-6deg)}
+
+/* ---------- PHOTOBOOTH ---------- */
+#booth{position:relative;background:var(--plum-2);color:var(--ivory);padding:14vh 0 0;overflow:hidden}
+#booth .ch-head{padding:0 6vw}
+#booth .ch-head .h-display em{color:var(--pink)}
+#booth .ch-head p{color:rgba(251,246,241,.65)}
+.booth-grid{display:grid;grid-template-columns:12vw 1fr 12vw;gap:3vw;height:118vh;padding:0 3vw;overflow:hidden;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent)}
+.strip-col{overflow:hidden}
+.strip-col .inner{display:flex;flex-direction:column;gap:2vw;animation:up 38s linear infinite}
+.strip-col.rev .inner{animation-direction:reverse;animation-duration:44s}
+.strip-col:hover .inner{animation-play-state:paused}
+.strip-col img{width:100%;border-radius:3px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+@keyframes up{to{transform:translateY(-50%)}}
+.booth-center{display:grid;grid-template-columns:1fr 1fr;gap:2vw;align-content:center}
+.booth-vid{position:relative;border-radius:6px;overflow:hidden;background:#000;aspect-ratio:3/2;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.booth-vid video{width:100%;height:100%;object-fit:cover}
+.booth-vid::after{content:"LIVE";position:absolute;top:12px;left:12px;font-size:10px;letter-spacing:.25em;padding:4px 8px;border-radius:99px;background:rgba(255,60,120,.9);color:#fff}
+.booth-row{display:flex;gap:2vw;padding:6vh 0 12vh;width:max-content;animation:left 60s linear infinite}
+.booth-row img{height:30vh;border-radius:4px;box-shadow:0 14px 40px rgba(0,0,0,.4)}
+@keyframes left{to{transform:translateX(-50%)}}
+
+/* ---------- FOLKLORICO ---------- */
+#roots{position:relative;height:120vh;overflow:hidden;color:#fff}
+#roots .bg{position:absolute;inset:0}
+#roots .bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.3)}
+#roots::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,8,14,.75),transparent 60%)}
+.roots-copy{position:absolute;left:6vw;top:50%;transform:translateY(-50%);z-index:2;max-width:620px}
+.roots-copy .h-display{font-size:clamp(60px,7vw,128px);margin:22px 0}
+.roots-copy .h-display em{color:var(--gold-hi)}
+.roots-copy p{font-family:var(--serif);font-style:italic;font-size:23px;line-height:1.5;color:rgba(255,255,255,.85)}
+.roots-thumbs{position:absolute;right:5vw;bottom:10vh;z-index:2;display:flex;gap:1.4vw}
+.roots-thumbs .frame{width:17vw;aspect-ratio:3/2;border:6px solid #fff;border-radius:2px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.roots-thumbs .frame:first-child{transform:rotate(-4deg) translateY(-3vh)}
+.roots-thumbs .frame:last-child{transform:rotate(3deg)}
+
+/* ---------- FINALE ---------- */
+#finale{position:relative;min-height:100vh;background:var(--plum);color:var(--ivory);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:4vw;padding:14vh 6vw;overflow:hidden}
+#confetti{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.finale-arch{height:min(72vh,780px)}
+.finale-arch .arch{height:100%}
+.finale-left .h-display{font-size:clamp(50px,5.4vw,96px)}
+.finale-left .h-display em{color:var(--gold-hi)}
+.finale-left p{font-family:var(--serif);font-style:italic;font-size:22px;color:rgba(251,246,241,.72);line-height:1.5;margin-top:24px;max-width:440px}
+.finale-right{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.finale-right .script{font-size:clamp(70px,6.4vw,120px)}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:16px 26px;border-radius:99px;border:1px solid rgba(241,215,154,.55);font-size:12px;letter-spacing:.26em;text-transform:uppercase;transition:background .35s,color .35s,border-color .35s}
+.btn:hover{background:var(--gold-hi);color:var(--plum);border-color:var(--gold-hi)}
+.btn svg{width:16px;height:16px}
+.footer{position:relative;background:#1E0E16;color:rgba(251,246,241,.5);text-align:center;padding:30px;font-size:11px;letter-spacing:.3em;text-transform:uppercase}
+.footer b{font-weight:500;color:var(--gold-hi)}
+
+/* ---------- LIGHTBOX ---------- */
+#lb{position:fixed;inset:0;z-index:150;background:rgba(20,8,14,.94);display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
+#lb.open{display:flex}
+#lb img{max-width:88vw;max-height:86vh;object-fit:contain;border-radius:3px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+#lb .lb-btn{position:absolute;top:50%;transform:translateY(-50%);width:58px;height:58px;border-radius:50%;border:1px solid rgba(255,255,255,.3);color:#fff;font-size:22px;display:grid;place-items:center;transition:background .3s}
+#lb .lb-btn:hover{background:rgba(255,255,255,.12)}
+#lb .prev{left:3vw}#lb .next{right:3vw}
+#lb .close{position:absolute;top:26px;right:30px;color:#fff;font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+#lb .count{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:rgba(255,255,255,.6);font-family:var(--serif);font-style:italic;font-size:18px}
+
+/* ---------- small screens: graceful stack ---------- */
+@media (max-width:899px){
+  .topbar{padding:14px 16px}
+  .intro-grid{grid-template-columns:1fr;justify-items:center;align-content:center;gap:18px;padding:70px 16px}
+  .intro-side{display:none}
+  .arch{height:62vh}
+  .intro-gracias{font-size:26vw;bottom:8vh}
+  #letter{grid-template-columns:1fr;padding:12vh 16px}
+  .letter-photo{height:70vh}
+  .letter-photo-tag{left:10px}
+  .ch-head{flex-direction:column;align-items:flex-start}
+  #ready{padding:12vh 16px}
+  .collage{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .collage .frame{position:relative;inset:auto!important;width:auto!important;height:auto!important;aspect-ratio:3/4}
+  .collage .note{position:relative;inset:auto;width:auto;grid-column:1/-1;padding:20px 0}
+  .mass-side{display:none}
+  #portraits .h-track{flex-direction:column;width:auto;height:auto;padding:12vh 16px;gap:40px}
+  .h-intro,.h-outro{width:auto}
+  .h-item,.h-item.up,.h-item.down{align-self:stretch;margin:0}
+  .h-item .frame{height:auto;width:100%}
+  .h-item .frame img{width:100%;margin:0}
+  .h-cap,.h-item.up .h-cap,.h-item.down .h-cap{position:static;display:block;margin-top:8px}
+  .h-bar{display:none}
+  .trad-grid{grid-template-columns:1fr 1fr}
+  .trad:nth-child(even){margin-top:6vh}
+  #traditions{padding:12vh 16px}
+  .waltz-stage{height:auto;grid-template-columns:1fr;padding:12vh 16px}
+  .stack{height:auto;display:flex;flex-direction:column;gap:20px}
+  .stack-card{position:relative;max-height:none}
+  .surprise-row{grid-template-columns:1fr}
+  #surprise,#party{padding:12vh 16px}
+  .bento{grid-template-columns:1fr 1fr;grid-auto-rows:40vw}
+  .b1,.b2,.b3,.b4,.b5,.b6{grid-column:auto;grid-row:auto}.b1{grid-column:1/-1}
+  #family{padding:12vh 16px}
+  .table{height:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .pol{position:relative;width:auto;left:auto!important;top:auto!important}
+  .drag-hint{display:none}
+  .booth-grid{grid-template-columns:22vw 1fr;height:90vh}
+  .strip-col.rev{display:none}
+  .booth-center{grid-template-columns:1fr}
+  .roots-thumbs{display:none}
+  .roots-copy{left:16px;right:16px}
+  #finale{grid-template-columns:1fr;padding:12vh 16px;text-align:center;justify-items:center}
+  .finale-right{align-items:center}
+}
+@media (prefers-reduced-motion:reduce){
+  .petal,.grain,.beams,.blob,.strip-col .inner,.booth-row,.gold-text,.neon{animation:none!important}
+}
+</style>
+</head>
+<body class="locked">
+
+<div class="progress" id="progress"></div>
+<div class="grain"></div>
+<canvas id="sparkles"></canvas>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"><span class="en">View</span><span class="es">Ver</span></div>
+
+<header class="topbar">
+  <div class="brand">Kimberly</div>
+  <div class="lang" role="group" aria-label="Language">
+    <button data-lang="en" class="on">EN</button><button data-lang="es">ES</button>
+  </div>
+</header>
+
+<!-- ================= GATE ================= -->
+<div id="gate">
+  <div class="petals" id="petals"></div>
+  <div class="gate-inner">
+    <div class="gate-top">
+      <div class="eyebrow"><span class="en">A little something for you</span><span class="es">Algo especial para ti</span></div>
+    </div>
+    <div class="envelope" id="envelope">
+      <div class="env-back"></div>
+      <div class="env-letter" id="envLetter">
+        <div class="eyebrow">XV Años · 29 · 08 · 2026</div>
+        <div class="script gold-text">Gracias</div>
+        <p><span class="en">for being part of my story</span><span class="es">por ser parte de mi historia</span></p>
+      </div>
+      <div class="env-front"></div>
+      <div class="env-flap" id="envFlap"></div>
+      <button class="seal" id="seal" aria-label="Open">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <radialGradient id="wax" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#FFEAF0"/><stop offset=".55" stop-color="#F4BFCD"/><stop offset="1" stop-color="#D88AA2"/></radialGradient>
+            <linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A6A2F"/><stop offset=".42" stop-color="#F6DFA6"/><stop offset=".62" stop-color="#B8893F"/><stop offset="1" stop-color="#EBCB85"/></linearGradient>
+            <filter id="wob"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="10"/></filter>
+          </defs>
+          <circle cx="100" cy="100" r="92" fill="url(#wax)" filter="url(#wob)"/>
+          <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(170,80,110,.25)" stroke-width="6"/>
+          <circle cx="100" cy="100" r="66" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
+          <text x="102" y="130" text-anchor="middle" font-family="Great Vibes, cursive" font-size="112" fill="url(#goldg)">K</text>
+        </svg>
+      </button>
+    </div>
+    <div class="gate-hint"><span class="en">Tap the seal to open</span><span class="es">Toca el sello para abrir</span></div>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ================= INTRO ================= -->
+<section id="intro">
+  <canvas id="introBg" width="90" height="160"></canvas>
+  <div class="intro-grid">
+    <div class="intro-side left">
+      <div class="eyebrow" style="color:var(--gold-hi)">XV Años</div>
+      <h1 class="h-display reveal-up"><span class="en">Thank you<br>for being part<br>of my <em>fifteen</em></span><span class="es">Gracias<br>por ser parte<br>de mis <em>quince</em></span></h1>
+    </div>
+    <div class="arch-wrap">
+      <div class="arch">
+        <video id="introVideo" src="video/intro.mp4" poster="video/intro-poster.jpg" playsinline preload="auto"></video>
+        <img class="kiss" id="kiss" src="video/intro-kiss.jpg" alt="">
+      </div>
+    </div>
+    <div class="intro-side right">
+      <div class="eyebrow" style="color:var(--gold-hi)">29 · 08 · 2026</div>
+      <p class="h-display" style="font-size:clamp(26px,2.2vw,38px);font-style:italic;color:rgba(251,246,241,.8)"><span class="en">Kimberly</span><span class="es">Kimberly</span></p>
+      <button class="sound" id="soundBtn"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lbl">Sound</span></button>
+    </div>
+  </div>
+  <div class="intro-gracias script gold-text" id="introGracias">Gracias</div>
+  <div class="scroll-cue" id="scrollCue"><span class="en">Scroll</span><span class="es">Desliza</span></div>
+</section>
+
+<!-- ================= LETTER ================= -->
+<section id="letter">
+  <div class="letter-photo" data-speed>
+    <img src="img/sm/ed-101.jpg" data-full="img/ed-101.jpg" data-lb alt="Kimberly in her XV gown">
+    <div class="letter-photo-tag">— 29 · 08 · 26</div>
+  </div>
+  <div class="letter-body">
+    <div class="eyebrow"><span class="en">A note from Kimberly</span><span class="es">Una nota de Kimberly</span></div>
+    <h2 class="h-display"><span class="en">To everyone who <em>celebrated</em> with me</span><span class="es">A todos los que <em>celebraron</em> conmigo</span></h2>
+    <div class="letter-text" id="letterText">
+      <div class="en">
+        <p>On August 29th you filled a church with prayers, a dance floor with joy, and my heart with memories I will keep forever.</p>
+        <p>Whether you traveled from far away, helped behind the scenes, danced until the very last song, or simply smiled with us — my fifteen was complete because you were there.</p>
+        <p>Here are some of the moments we lived together. I hope they make you smile as much as they make me smile.</p>
+      </div>
+      <div class="es">
+        <p>El 29 de agosto llenaron la iglesia de oraciones, la pista de alegría y mi corazón de recuerdos que guardaré para siempre.</p>
+        <p>Ya sea que viajaron desde lejos, ayudaron detrás de escena, bailaron hasta la última canción o simplemente sonrieron con nosotros — mis quince fueron completos porque ustedes estuvieron ahí.</p>
+        <p>Aquí están algunos de los momentos que vivimos juntos. Espero que les saquen una sonrisa como a mí.</p>
+      </div>
+    </div>
+    <div class="signature script" id="signature"><span class="en">With love, Kimberly</span><span class="es">Con cariño, Kimberly</span></div>
+  </div>
+</section>
+
+<div class="marquee" id="marquee">
+  <div class="marquee-row" data-dir="-1"><span>Gracias</span><span class="o">Thank you</span><span class="s">con amor</span><span>Gracias</span><span class="o">Thank you</span><span class="s">con amor</span><span>Gracias</span><span class="o">Thank you</span><span class="s">con amor</span></div>
+</div>
+
+<!-- ================= I. GETTING READY ================= -->
+<section id="ready" class="chapter">
+  <div class="ch-head">
+    <div>
+      <div class="chapter-no"><span class="en">Chapter I</span><span class="es">Capítulo I</span></div>
+      <h2 class="h-display split-lines"><span class="en">Getting <em>ready</em></span><span class="es">Preparándome</span></h2>
+    </div>
+    <p><span class="en">Curls, glitter boots, a bouquet of roses, and a little bit of nerves.</span><span class="es">Rizos, botas de brillo, un ramo de rosas y un poquito de nervios.</span></p>
+  </div>
+  <div class="collage">
+    <div class="frame c1" data-speed="0.12"><img loading="lazy" src="img/sm/doe-12.jpg" data-full="img/doe-12.jpg" data-lb alt=""></div>
+    <div class="frame c2" data-speed="-0.08"><img loading="lazy" src="img/sm/doe-33.jpg" data-full="img/doe-33.jpg" data-lb alt=""></div>
+    <div class="frame c3" data-speed="0.22"><img loading="lazy" src="img/sm/doe-3.jpg" data-full="img/doe-3.jpg" data-lb alt=""></div>
+    <div class="frame c4" data-speed="-0.14"><img loading="lazy" src="img/sm/doe-19.jpg" data-full="img/doe-19.jpg" data-lb alt=""></div>
+    <div class="frame c5" data-speed="0.1"><img loading="lazy" src="img/sm/doe-26.jpg" data-full="img/doe-26.jpg" data-lb alt=""></div>
+    <div class="frame c6" data-speed="-0.2"><img loading="lazy" src="img/sm/doe-46.jpg" data-full="img/doe-46.jpg" data-lb alt=""></div>
+    <div class="note" data-speed="0.3"><span class="en">the calm before the magic ♡</span><span class="es">la calma antes de la magia ♡</span></div>
+  </div>
+</section>
+
+<!-- ================= II. MASS ================= -->
+<section id="mass" class="chapter">
+  <div class="mass-stage" id="massStage">
+    <div class="mass-title">
+      <div>
+        <div class="chapter-no" style="justify-content:center"><span class="en">Chapter II</span><span class="es">Capítulo II</span></div>
+        <h2 class="h-display" style="margin-top:14px"><span class="en">The <em>Blessing</em></span><span class="es">La <em>Bendición</em></span></h2>
+      </div>
+      <div class="eyebrow"><span class="en">Keep scrolling</span><span class="es">Sigue deslizando</span></div>
+    </div>
+    <div class="mass-side l"><img loading="lazy" src="img/sm/doe-289.jpg" style="width:100%;height:100%;object-fit:cover" data-full="img/doe-289.jpg" data-lb alt=""></div>
+    <div class="mass-side r"><img loading="lazy" src="img/sm/doe-71.jpg" style="width:100%;height:100%;object-fit:cover" data-full="img/doe-71.jpg" data-lb alt=""></div>
+    <div class="mass-img" id="massImg"><img src="img/doe-243.jpg" data-full="img/doe-243.jpg" data-lb alt=""></div>
+    <div class="mass-quote" id="massQuote">
+      <div class="eyebrow"><span class="en">Thank you</span><span class="es">Gracias</span></div>
+      <p class="h-display" style="margin-top:16px"><span class="en">for every <em>prayer</em>, every blessing, and every hand held in that church.</span><span class="es">por cada <em>oración</em>, cada bendición y cada mano que me acompañó en la iglesia.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= III. PORTRAITS ================= -->
+<section id="portraits" class="chapter">
+  <div class="h-track" id="hTrack">
+    <div class="h-intro">
+      <div class="chapter-no"><span class="en">Chapter III</span><span class="es">Capítulo III</span></div>
+      <h2 class="h-display"><span class="en">Like a <em>fairytale</em></span><span class="es">Como un <em>cuento</em> de hadas</span></h2>
+      <p><span class="en">A princess gown, a castle garden, a vintage convertible and one very handsome horse.</span><span class="es">Un vestido de princesa, un jardín de castillo, un convertible clásico y un caballo muy guapo.</span></p>
+    </div>
+    <div class="h-item" style="--h:74vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-238A2347.jpg" data-full="img/ed-238A2347.jpg" data-lb alt=""></div><div class="h-cap">01 — <span class="en">The castle</span><span class="es">El castillo</span></div></div>
+    <div class="h-item up" style="--h:48vh;--ar:3/2"><div class="frame"><img loading="lazy" src="img/sm/ed-95.jpg" data-full="img/ed-95.jpg" data-lb alt=""></div><div class="h-cap">02</div></div>
+    <div class="h-item down" style="--h:62vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-133.jpg" data-full="img/ed-133.jpg" data-lb alt=""></div><div class="h-cap">03 — <span class="en">Golden hour</span><span class="es">La hora dorada</span></div></div>
+    <div class="h-item" style="--h:70vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-105.jpg" data-full="img/ed-105.jpg" data-lb alt=""></div><div class="h-cap">04</div></div>
+    <div class="h-item up" style="--h:50vh;--ar:3/2"><div class="frame"><img loading="lazy" src="img/sm/ed-162.jpg" data-full="img/ed-162.jpg" data-lb alt=""></div><div class="h-cap">05 — <span class="en">Ready to ride</span><span class="es">Lista para rodar</span></div></div>
+    <div class="h-item down" style="--h:46vh;--ar:3/2"><div class="frame"><img loading="lazy" src="img/sm/ed-170.jpg" data-full="img/ed-170.jpg" data-lb alt=""></div><div class="h-cap">06</div></div>
+    <div class="h-item" style="--h:72vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-204.jpg" data-full="img/ed-204.jpg" data-lb alt=""></div><div class="h-cap">07 — <span class="en">Roses</span><span class="es">Rosas</span></div></div>
+    <div class="h-item up" style="--h:56vh;--ar:3/2"><div class="frame"><img loading="lazy" src="img/sm/doe-548.jpg" data-full="img/doe-548.jpg" data-lb alt=""></div><div class="h-cap">08</div></div>
+    <div class="h-item down" style="--h:64vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-230.jpg" data-full="img/ed-230.jpg" data-lb alt=""></div><div class="h-cap">09</div></div>
+    <div class="h-item" style="--h:74vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-282.jpg" data-full="img/ed-282.jpg" data-lb alt=""></div><div class="h-cap">10 — <span class="en">Best friend</span><span class="es">Mejor amigo</span></div></div>
+    <div class="h-item up" style="--h:52vh;--ar:3/2"><div class="frame"><img loading="lazy" src="img/sm/ed-290.jpg" data-full="img/ed-290.jpg" data-lb alt=""></div><div class="h-cap">11</div></div>
+    <div class="h-item down" style="--h:64vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-144.jpg" data-full="img/ed-144.jpg" data-lb alt=""></div><div class="h-cap">12</div></div>
+    <div class="h-item" style="--h:56vh;--ar:3/2"><div class="frame"><img loading="lazy" src="img/sm/doe-532.jpg" data-full="img/doe-532.jpg" data-lb alt=""></div><div class="h-cap">13 — <span class="en">The fountain</span><span class="es">La fuente</span></div></div>
+    <div class="h-item up" style="--h:66vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-117.jpg" data-full="img/ed-117.jpg" data-lb alt=""></div><div class="h-cap">14</div></div>
+    <div class="h-outro">
+      <div class="script gold-text">fifteen</div>
+      <div class="eyebrow" style="color:var(--gold-hi);margin-top:10px"><span class="en">and feeling like royalty</span><span class="es">y sintiéndome de la realeza</span></div>
+    </div>
+  </div>
+  <div class="h-bar"><i id="hBar"></i></div>
+</section>
+
+<!-- ================= XV ================= -->
+<section id="xv">
+  <div class="xv-word" id="xvWord">XV</div>
+  <div class="xv-sub" id="xvSub">
+    <div class="eyebrow"><span class="en">Fifteen years</span><span class="es">Quince años</span></div>
+    <p class="h-display" style="margin-top:10px"><span class="en">One <em>unforgettable</em> night</span><span class="es">Una noche <em>inolvidable</em></span></p>
+  </div>
+</section>
+
+<!-- ================= IV. TRADITIONS ================= -->
+<section id="traditions" class="chapter">
+  <div class="ch-head">
+    <div>
+      <div class="chapter-no"><span class="en">Chapter IV</span><span class="es">Capítulo IV</span></div>
+      <h2 class="h-display"><span class="en">The <em>traditions</em></span><span class="es">Las <em>tradiciones</em></span></h2>
+    </div>
+    <p><span class="en">The little rituals that turn a party into a quinceañera.</span><span class="es">Los pequeños rituales que convierten una fiesta en unos XV años.</span></p>
+  </div>
+  <div class="trad-grid">
+    <article class="trad"><div class="num">i</div><div class="frame"><img loading="lazy" src="img/sm/doe-922.jpg" data-full="img/doe-922.jpg" data-lb alt=""></div><h3><span class="en">The shoes</span><span class="es">Las zapatillas</span></h3><p><span class="en">From girl to young woman, one step at a time.</span><span class="es">De niña a señorita, un paso a la vez.</span></p></article>
+    <article class="trad"><div class="num">ii</div><div class="frame"><img loading="lazy" src="img/sm/doe-944.jpg" data-full="img/doe-944.jpg" data-lb alt=""></div><h3><span class="en">The last doll</span><span class="es">La última muñeca</span></h3><p><span class="en">A sweet goodbye to childhood.</span><span class="es">Un dulce adiós a la infancia.</span></p></article>
+    <article class="trad"><div class="num">iii</div><div class="frame"><img loading="lazy" src="img/sm/doe-915.jpg" data-full="img/doe-915.jpg" data-lb alt=""></div><h3><span class="en">The ring</span><span class="es">El anillo</span></h3><p><span class="en">A promise to carry forever.</span><span class="es">Una promesa para siempre.</span></p></article>
+    <article class="trad"><div class="num">iv</div><div class="frame"><img loading="lazy" src="img/sm/doe-776.jpg" data-full="img/doe-776.jpg" data-lb alt=""></div><h3>Mariachi</h3><p><span class="en">Because no fiesta is complete without it.</span><span class="es">Porque no hay fiesta sin mariachi.</span></p></article>
+  </div>
+</section>
+
+<!-- ================= V. WALTZ ================= -->
+<section id="waltz" class="chapter">
+  <div class="waltz-stage">
+    <div class="waltz-copy">
+      <div class="chapter-no"><span class="en">Chapter V</span><span class="es">Capítulo V</span></div>
+      <h2 class="h-display"><span class="en">The <em>waltz</em></span><span class="es">El <em>vals</em></span></h2>
+      <p><span class="en">Every turn, every hug, every tear. The dances we'll remember for the rest of our lives.</span><span class="es">Cada vuelta, cada abrazo, cada lágrima. Los bailes que recordaremos toda la vida.</span></p>
+      <div class="waltz-count"><b id="waltzNum">01</b> / 07</div>
+    </div>
+    <div class="stack" id="stack">
+      <figure class="stack-card"><div class="frame"><img loading="lazy" src="img/sm/doe-1056.jpg" data-full="img/doe-1056.jpg" data-lb alt=""></div><figcaption><span class="en">the grand entrance</span><span class="es">la gran entrada</span></figcaption></figure>
+      <figure class="stack-card"><div class="frame"><img loading="lazy" src="img/sm/doe-1123.jpg" data-full="img/doe-1123.jpg" data-lb alt=""></div><figcaption><span class="en">dancing on clouds</span><span class="es">bailando en las nubes</span></figcaption></figure>
+      <figure class="stack-card"><div class="frame"><img loading="lazy" src="img/sm/doe-1126.jpg" data-full="img/doe-1126.jpg" data-lb alt=""></div><figcaption><span class="en">mom ♡</span><span class="es">mamá ♡</span></figcaption></figure>
+      <figure class="stack-card"><div class="frame"><img loading="lazy" src="img/sm/doe-1147.jpg" data-full="img/doe-1147.jpg" data-lb alt=""></div><figcaption><span class="en">happy tears</span><span class="es">lágrimas de alegría</span></figcaption></figure>
+      <figure class="stack-card"><div class="frame"><img loading="lazy" src="img/sm/doe-1153.jpg" data-full="img/doe-1153.jpg" data-lb alt=""></div><figcaption><span class="en">dad ♡</span><span class="es">papá ♡</span></figcaption></figure>
+      <figure class="stack-card"><div class="frame"><img loading="lazy" src="img/sm/doe-1172.jpg" data-full="img/doe-1172.jpg" data-lb alt=""></div><figcaption><span class="en">the biggest hug</span><span class="es">el abrazo más grande</span></figcaption></figure>
+      <figure class="stack-card"><div class="frame"><img loading="lazy" src="img/sm/doe-1180.jpg" data-full="img/doe-1180.jpg" data-lb alt=""></div><figcaption><span class="en">forever grateful</span><span class="es">agradecida por siempre</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VI. SURPRISE ================= -->
+<section id="surprise" class="chapter">
+  <div class="beams"></div>
+  <div class="surprise-head">
+    <div class="chapter-no" style="justify-content:center;color:var(--pink)"><span class="en">Chapter VI</span><span class="es">Capítulo VI</span></div>
+    <h2 class="big-letters en" aria-label="Surprise dance"><span>S</span><span>u</span><span>r</span><span>p</span><span>r</span><span>i</span><span>s</span><span>e</span><span>&nbsp;</span><span class="it">d</span><span class="it">a</span><span class="it">n</span><span class="it">c</span><span class="it">e</span></h2>
+    <h2 class="big-letters es" aria-label="Baile sorpresa"><span>B</span><span>a</span><span>i</span><span>l</span><span>e</span><span>&nbsp;</span><span class="it">s</span><span class="it">o</span><span class="it">r</span><span class="it">p</span><span class="it">r</span><span class="it">e</span><span class="it">s</span><span class="it">a</span></h2>
+  </div>
+  <div class="surprise-row">
+    <div class="frame" data-speed="0.15"><img loading="lazy" src="img/sm/doe-1327.jpg" data-full="img/doe-1327.jpg" data-lb alt=""></div>
+    <div class="frame" data-speed="-0.1"><img loading="lazy" src="img/sm/doe-1378.jpg" data-full="img/doe-1378.jpg" data-lb alt="" style="object-position:30% 50%"></div>
+    <div class="frame" data-speed="0.22"><img loading="lazy" src="img/sm/doe-1354.jpg" data-full="img/doe-1354.jpg" data-lb alt=""></div>
+  </div>
+</section>
+
+<!-- ================= VII. HORA LOCA ================= -->
+<section id="party" class="chapter">
+  <div class="blob a"></div><div class="blob b"></div><div class="blob c"></div>
+  <div class="neon">Hora Loca</div>
+  <div class="neon-sub"><span class="en">Chapter VII · Glow sticks, robots &amp; Hello Kitty</span><span class="es">Capítulo VII · Barras de luz, robots y Hello Kitty</span></div>
+  <div class="bento">
+    <div class="frame b1"><img loading="lazy" src="img/sm/doe-1513.jpg" data-full="img/doe-1513.jpg" data-lb alt=""></div>
+    <div class="frame b2"><img loading="lazy" src="img/sm/doe-1524.jpg" data-full="img/doe-1524.jpg" data-lb alt=""></div>
+    <div class="frame b3"><img loading="lazy" src="img/sm/doe-1520.jpg" data-full="img/doe-1520.jpg" data-lb alt=""></div>
+    <div class="frame b4"><img loading="lazy" src="img/sm/doe-1532.jpg" data-full="img/doe-1532.jpg" data-lb alt=""></div>
+    <div class="frame b5"><img loading="lazy" src="img/sm/doe-1512.jpg" data-full="img/doe-1512.jpg" data-lb alt=""></div>
+    <div class="frame b6"><img loading="lazy" src="img/sm/doe-737.jpg" data-full="img/doe-737.jpg" data-lb alt=""></div>
+  </div>
+</section>
+
+<!-- ================= VIII. FAMILY ================= -->
+<section id="family" class="chapter">
+  <div class="ch-head" style="margin-bottom:4vh">
+    <div>
+      <div class="chapter-no"><span class="en">Chapter VIII</span><span class="es">Capítulo VIII</span></div>
+      <h2 class="h-display"><span class="en">My <em>people</em></span><span class="es">Mi <em>gente</em></span></h2>
+    </div>
+    <p><span class="en">Family, friends, and everyone who made the night feel like home.</span><span class="es">Familia, amigos y todos los que hicieron sentir la noche como en casa.</span></p>
+  </div>
+  <div class="drag-hint"><span class="en">psst… drag the photos ↓</span><span class="es">psst… arrastra las fotos ↓</span></div>
+  <div class="table" id="table">
+    <figure class="pol" style="left:2%;top:4%" data-r="-7"><div class="frame"><img loading="lazy" src="img/sm/doe-707.jpg" data-full="img/doe-707.jpg" data-lb alt=""></div><figcaption><span class="en">la familia</span><span class="es">la familia</span></figcaption></figure>
+    <figure class="pol" style="left:24%;top:16%" data-r="5"><div class="frame"><img loading="lazy" src="img/sm/doe-753.jpg" data-full="img/doe-753.jpg" data-lb alt=""></div><figcaption>besitos ♡</figcaption></figure>
+    <figure class="pol" style="left:47%;top:2%" data-r="-3"><div class="frame"><img loading="lazy" src="img/sm/doe-49.jpg" data-full="img/doe-49.jpg" data-lb alt=""></div><figcaption><span class="en">big hugs</span><span class="es">abrazos</span></figcaption></figure>
+    <figure class="pol" style="left:72%;top:12%" data-r="8"><div class="frame"><img loading="lazy" src="img/sm/doe-723.jpg" data-full="img/doe-723.jpg" data-lb alt=""></div><figcaption><span class="en">my girls</span><span class="es">mis niñas</span></figcaption></figure>
+    <figure class="pol" style="left:8%;top:50%" data-r="4"><div class="frame"><img loading="lazy" src="img/sm/doe-764.jpg" data-full="img/doe-764.jpg" data-lb alt=""></div><figcaption>forever</figcaption></figure>
+    <figure class="pol" style="left:33%;top:54%" data-r="-6"><div class="frame"><img loading="lazy" src="img/sm/doe-46.jpg" data-full="img/doe-46.jpg" data-lb alt=""></div><figcaption><span class="en">so happy!</span><span class="es">¡qué felicidad!</span></figcaption></figure>
+    <figure class="pol" style="left:57%;top:48%" data-r="6"><div class="frame"><img loading="lazy" src="img/sm/doe-588.jpg" data-full="img/doe-588.jpg" data-lb alt=""></div><figcaption>XV · 08.29.26</figcaption></figure>
+    <figure class="pol" style="left:78%;top:56%" data-r="-4"><div class="frame"><img loading="lazy" src="img/sm/ed-178.jpg" data-full="img/ed-178.jpg" data-lb alt=""></div><figcaption><span class="en">details</span><span class="es">detalles</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- ================= IX. PHOTOBOOTH ================= -->
+<section id="booth" class="chapter">
+  <div class="ch-head">
+    <div>
+      <div class="chapter-no" style="color:var(--pink)"><span class="en">Chapter IX</span><span class="es">Capítulo IX</span></div>
+      <h2 class="h-display"><span class="en">Say <em>cheese!</em></span><span class="es">¡Digan <em>whisky!</em></span></h2>
+    </div>
+    <p><span class="en">Silly hats, big glasses and bunny ears. Find yourself in the photobooth.</span><span class="es">Sombreros, lentes gigantes y orejitas. Búscate en la cabina de fotos.</span></p>
+  </div>
+  <div class="booth-grid">
+    <div class="strip-col"><div class="inner">
+      <img loading="lazy" src="img/sm/pb-193013_002_1x.jpg" data-full="img/pb-193013_002_1x.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-204700_106_1x.jpg" data-full="img/pb-204700_106_1x.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-200741_557_1x.jpg" data-full="img/pb-200741_557_1x.jpg" data-lb alt="">
+      <img loading="lazy" src="img/sm/pb-193013_002_1x.jpg" alt=""><img loading="lazy" src="img/sm/pb-204700_106_1x.jpg" alt=""><img loading="lazy" src="img/sm/pb-200741_557_1x.jpg" alt="">
+    </div></div>
+    <div class="booth-center">
+      <div class="booth-vid"><video data-src="video/pb-195306_704.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="booth-vid"><video data-src="video/pb-202354_201.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="booth-vid"><video data-src="video/pb-202834_071.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="booth-vid"><video data-src="video/pb-195538_863.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="booth-vid"><video data-src="video/pb-211229_391.mp4" muted loop playsinline preload="none"></video></div>
+      <div class="booth-vid"><video data-src="video/pb-192430_767.mp4" muted loop playsinline preload="none"></video></div>
+    </div>
+    <div class="strip-col rev"><div class="inner">
+      <img loading="lazy" src="img/sm/pb-212545_509_1x.jpg" data-full="img/pb-212545_509_1x.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-203452_191_1x.jpg" data-full="img/pb-203452_191_1x.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-194156_671_1x.jpg" data-full="img/pb-194156_671_1x.jpg" data-lb alt="">
+      <img loading="lazy" src="img/sm/pb-212545_509_1x.jpg" alt=""><img loading="lazy" src="img/sm/pb-203452_191_1x.jpg" alt=""><img loading="lazy" src="img/sm/pb-194156_671_1x.jpg" alt="">
+    </div></div>
+  </div>
+  <div style="overflow:hidden">
+    <div class="booth-row">
+      <img loading="lazy" src="img/sm/pb-192131_394.jpg" data-full="img/pb-192131_394.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-193828_755.jpg" data-full="img/pb-193828_755.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-195732_745.jpg" data-full="img/pb-195732_745.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-202540_877.jpg" data-full="img/pb-202540_877.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-203102_405.jpg" data-full="img/pb-203102_405.jpg" data-lb alt=""><img loading="lazy" src="img/sm/pb-212718_499.jpg" data-full="img/pb-212718_499.jpg" data-lb alt="">
+      <img loading="lazy" src="img/sm/pb-192131_394.jpg" alt=""><img loading="lazy" src="img/sm/pb-193828_755.jpg" alt=""><img loading="lazy" src="img/sm/pb-195732_745.jpg" alt=""><img loading="lazy" src="img/sm/pb-202540_877.jpg" alt=""><img loading="lazy" src="img/sm/pb-203102_405.jpg" alt=""><img loading="lazy" src="img/sm/pb-212718_499.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- ================= X. ROOTS ================= -->
+<section id="roots" class="chapter">
+  <div class="bg"><img loading="lazy" src="img/ed-310.jpg" data-full="img/ed-310.jpg" data-lb alt=""></div>
+  <div class="roots-copy">
+    <div class="chapter-no" style="color:var(--gold-hi)"><span class="en">Chapter X</span><span class="es">Capítulo X</span></div>
+    <h2 class="h-display"><span class="en">Our <em>roots</em>,<br>our pride</span><span class="es">Nuestras <em>raíces</em>,<br>nuestro orgullo</span></h2>
+    <p><span class="en">Folklórico skirts, a charro, and the colors of México — carried with love into a new chapter.</span><span class="es">Faldas de folklórico, un charro y los colores de México — llevados con amor a una nueva etapa.</span></p>
+  </div>
+  <div class="roots-thumbs">
+    <div class="frame"><img loading="lazy" src="img/sm/ed-301.jpg" data-full="img/ed-301.jpg" data-lb alt=""></div>
+    <div class="frame"><img loading="lazy" src="img/sm/ed-312.jpg" data-full="img/ed-312.jpg" data-lb alt=""></div>
+  </div>
+</section>
+
+<!-- ================= FINALE ================= -->
+<section id="finale">
+  <canvas id="confetti"></canvas>
+  <div class="finale-left">
+    <div class="eyebrow" style="color:var(--gold-hi)"><span class="en">From the bottom of our hearts</span><span class="es">De todo corazón</span></div>
+    <h2 class="h-display" style="margin-top:18px"><span class="en">Thank you for making my <em>dream</em> come true</span><span class="es">Gracias por hacer mi <em>sueño</em> realidad</span></h2>
+    <p><span class="en">Your presence was the most beautiful gift. We will carry this night with us forever.</span><span class="es">Su presencia fue el regalo más bonito. Esta noche la llevaremos con nosotros para siempre.</span></p>
+  </div>
+  <div class="finale-arch arch-wrap">
+    <div class="arch"><img loading="lazy" src="video/intro-kiss.jpg" alt="Kimberly blowing a kiss"></div>
+  </div>
+  <div class="finale-right">
+    <div class="script gold-text">Kimberly</div>
+    <div class="eyebrow" style="color:var(--gold-hi);margin-bottom:18px"><span class="en">&amp; family · XV años</span><span class="es">&amp; familia · XV años</span></div>
+    <button class="btn" id="replayBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg><span class="en">Watch again</span><span class="es">Ver de nuevo</span></button>
+    <button class="btn" id="galleryBtn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span class="en">Browse all photos</span><span class="es">Ver todas las fotos</span></button>
+  </div>
+</section>
+<footer class="footer">Kimberly · XV · 29.08.2026 &nbsp;·&nbsp; <span class="en">Designed by</span><span class="es">Diseñado por</span> <b>REGO Agency</b></footer>
+
+</main>
+
+<div id="lb" aria-hidden="true">
+  <button class="close" id="lbClose"><span class="en">Close ✕</span><span class="es">Cerrar ✕</span></button>
+  <button class="lb-btn prev" id="lbPrev" aria-label="Previous">←</button>
+  <img id="lbImg" alt="">
+  <button class="lb-btn next" id="lbNext" aria-label="Next">→</button>
+  <div class="count" id="lbCount"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+const $ = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hasGsap = !!window.gsap;
+const root = document.documentElement;
+
+/* ---------- language ---------- */
+function setLang(l) {
+  root.lang = l;
+  $$('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
+  try { localStorage.setItem('kxv-lang', l); } catch (e) {}
+  if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
+}
+let saved = null; try { saved = localStorage.getItem('kxv-lang'); } catch (e) {}
+setLang(saved || ((navigator.language || '').toLowerCase().startsWith('es') ? 'es' : 'en'));
+$$('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+
+/* ---------- petals ---------- */
+const petals = $('#petals');
+for (let i = 0; i < 26; i++) {
+  const p = document.createElement('i');
+  p.className = 'petal';
+  p.style.cssText = `left:${Math.random()*100}%;--s:${10+Math.random()*16}px;--d:${9+Math.random()*10}s;--delay:${-Math.random()*18}s;--x:${(Math.random()-.5)*30}vw;--r:${(Math.random()-.5)*900}deg`;
+  petals.appendChild(p);
+}
+
+/* ---------- sparkles ---------- */
+const sc = $('#sparkles'), sx = sc.getContext('2d');
+let sparkleBoost = 1, sw, sh;
+const dots = Array.from({ length: 55 }, () => ({ x: Math.random(), y: Math.random(), r: Math.random() * 1.6 + .3, s: Math.random() * .0006 + .0002, t: Math.random() * 6.28 }));
+function sizeS() { sw = sc.width = innerWidth * devicePixelRatio; sh = sc.height = innerHeight * devicePixelRatio; }
+sizeS(); addEventListener('resize', sizeS);
+function drawS() {
+  sx.clearRect(0, 0, sw, sh);
+  for (const d of dots) {
+    d.y -= d.s; d.t += .03; if (d.y < -.02) { d.y = 1.02; d.x = Math.random(); }
+    const a = (Math.sin(d.t) * .5 + .5) * .75 * sparkleBoost;
+    const x = d.x * sw, y = d.y * sh, r = d.r * devicePixelRatio;
+    sx.fillStyle = `rgba(241,215,154,${a})`;
+    sx.beginPath(); sx.arc(x, y, r, 0, 6.28); sx.fill();
+    if (d.r > 1.4) { sx.fillStyle = `rgba(255,240,210,${a*.5})`; sx.fillRect(x - r*4, y - .5, r*8, 1); sx.fillRect(x - .5, y - r*4, 1, r*8); }
+  }
+  requestAnimationFrame(drawS);
+}
+if (!reduce) drawS();
+
+/* ---------- intro video + blurred bg ---------- */
+const video = $('#introVideo'), bg = $('#introBg'), bgx = bg.getContext('2d'), soundBtn = $('#soundBtn');
+const poster = new Image(); poster.src = 'video/intro-poster.jpg'; poster.onload = () => bgx.drawImage(poster, 0, 0, 90, 160);
+(function loopBg() { if (!video.paused && !video.ended) bgx.drawImage(video, 0, 0, 90, 160); requestAnimationFrame(loopBg); })();
+function updateSound() { soundBtn.classList.toggle('muted', video.muted); $('.lbl', soundBtn).textContent = video.muted ? (root.lang === 'es' ? 'Sin sonido' : 'Sound off') : (root.lang === 'es' ? 'Sonido' : 'Sound on'); }
+soundBtn.addEventListener('click', () => { video.muted = !video.muted; if (video.paused) playIntro(); updateSound(); });
+function playIntro() {
+  video.currentTime = 0;
+  if (hasGsap) gsap.to('#kiss', { opacity: 0, duration: .4 });
+  const p = video.play();
+  if (p && p.catch) p.catch(() => { video.muted = true; video.play(); updateSound(); });
+  updateSound();
+}
+video.addEventListener('ended', () => {
+  if (hasGsap) gsap.to('#kiss', { opacity: 1, duration: 1.2, ease: 'power2.out' }); else $('#kiss').style.opacity = 1;
+});
+
+/* ---------- no-GSAP fallback ---------- */
+if (!hasGsap) {
+  $('#seal').addEventListener('click', () => { $('#gate').remove(); document.body.classList.remove('locked'); $('#scrollCue').style.display = 'block'; playIntro(); });
+  $$('.mass-img').forEach(m => m.style.clipPath = 'none');
+  $('#massQuote').style.opacity = 1;
+  initLightbox();
+  return;
+}
+
+gsap.registerPlugin(ScrollTrigger, Draggable);
+
+/* ---------- smooth scroll ---------- */
+let lenis = null;
+if (window.Lenis && !reduce) {
+  lenis = new Lenis({ lerp: .085, wheelMultiplier: .9 });
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(t => lenis.raf(t * 1000));
+  gsap.ticker.lagSmoothing(0);
+  lenis.stop();
+}
+gsap.to('#progress', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: .3 } });
+
+/* ---------- intro pre-states ---------- */
+gsap.set('#introGracias', { clipPath: 'inset(0 100% 0 0)' });
+gsap.set('.intro-side > *', { opacity: 0, y: 30 });
+gsap.set('#intro .arch-wrap', { opacity: 0, scale: .9, y: 40 });
+
+/* ---------- open envelope ---------- */
+let opened = false;
+$('#seal').addEventListener('click', openEnvelope);
+if (/[?&]open\b/.test(location.search)) addEventListener('load', openEnvelope);
+function openEnvelope() {
+  if (opened) return; opened = true;
+  // unlock audio within the gesture
+  video.muted = false; video.play().then(() => { video.pause(); video.currentTime = 0; }).catch(() => {});
+  const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } });
+  tl.to('.gate-hint, .gate-top', { opacity: 0, duration: .4 })
+    .to('#seal', { scale: 1.18, duration: .18, ease: 'power2.out' }, 0)
+    .to('#seal', { scale: 0, rotate: -60, opacity: 0, duration: .45, ease: 'back.in(2)' }, .18)
+    .to('#envFlap', { rotateX: 180, duration: .9 }, .45)
+    .set('#envFlap', { zIndex: 1 }, .9)
+    .to('#envLetter', { yPercent: -58, duration: 1.1, ease: 'power3.out' }, 1.1)
+    .to('#envelope', { scale: 1.08, duration: 1.2, ease: 'power2.out' }, 1.1)
+    .to('#envelope', { y: '8vh', duration: .7, ease: 'power2.in' }, 2.7)
+    .to('#gate', { autoAlpha: 0, duration: .9, ease: 'power2.inOut', onStart: () => { sparkleBoost = 2.4; } }, 2.9)
+    .add(() => { $('#gate').remove(); document.body.classList.remove('locked'); lenis && lenis.start(); ScrollTrigger.refresh(); playIntro(); }, 3.6)
+    .to('#intro .arch-wrap', { opacity: 1, scale: 1, y: 0, duration: 1.6, ease: 'expo.out' }, 3.3)
+    .to('.intro-side > *', { opacity: 1, y: 0, duration: 1.2, stagger: .12, ease: 'power3.out' }, 3.8)
+    .to('#introGracias', { clipPath: 'inset(0 0% 0 0)', duration: 2.4, ease: 'power2.inOut' }, 4.3)
+    .add(() => { $('#scrollCue').style.display = 'block'; gsap.from('#scrollCue', { opacity: 0, duration: 1 }); sparkleBoost = 1.3; }, 6.2);
+}
+
+/* ---------- intro scroll-out ---------- */
+gsap.to('#intro .arch-wrap', { yPercent: -12, scale: .92, ease: 'none', scrollTrigger: { trigger: '#intro', start: 'top top', end: 'bottom top', scrub: true } });
+gsap.to('#introGracias', { yPercent: 60, opacity: 0, ease: 'none', scrollTrigger: { trigger: '#intro', start: 'top top', end: 'bottom top', scrub: true } });
+ScrollTrigger.create({ trigger: '#intro', start: 'bottom 40%', onLeave: () => { video.pause(); sparkleBoost = .7; }, onEnterBack: () => { sparkleBoost = 1.3; if (!video.ended) video.play().catch(() => {}); } });
+
+/* ---------- letter: word-by-word ---------- */
+$$('#letterText p').forEach(p => {
+  p.innerHTML = p.textContent.split(/(\s+)/).map(w => /\s+/.test(w) ? w : `<span class="w">${w}</span>`).join('');
+});
+$$('#letterText > div').forEach(block => {
+  gsap.fromTo($$('.w', block), { opacity: .12 }, { opacity: 1, stagger: .05, ease: 'none',
+    scrollTrigger: { trigger: '#letterText', start: 'top 75%', end: 'bottom 55%', scrub: true } });
+});
+gsap.fromTo('#signature', { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)', duration: 2.2, ease: 'power2.inOut', scrollTrigger: { trigger: '#signature', start: 'top 85%' } });
+gsap.fromTo('.letter-photo', { clipPath: 'inset(100% 0 0 0 round 999px 999px 10px 10px)' }, { clipPath: 'inset(0% 0 0 0 round 999px 999px 10px 10px)', duration: 1.6, ease: 'expo.out', scrollTrigger: { trigger: '.letter-photo', start: 'top 80%' } });
+gsap.fromTo('.letter-photo img', { yPercent: -10 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: '.letter-photo', start: 'top bottom', end: 'bottom top', scrub: true } });
+
+/* ---------- generic reveals ---------- */
+$$('.ch-head, .waltz-copy, .roots-copy, .finale-left, .finale-right, .xv-sub').forEach(el => {
+  gsap.from(el.children, { y: 60, opacity: 0, duration: 1.2, stagger: .12, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 82%' } });
+});
+
+/* ---------- marquee with velocity ---------- */
+const row = $('.marquee-row');
+row.innerHTML += row.innerHTML;
+let mx = 0, vel = 0;
+ScrollTrigger.create({ trigger: '#marquee', start: 'top bottom', end: 'bottom top', onUpdate: s => { vel = s.getVelocity() / 400; } });
+gsap.ticker.add(() => {
+  mx -= 1.1 + Math.abs(vel); vel *= .9;
+  const half = row.scrollWidth / 2; if (-mx > half) mx += half;
+  gsap.set(row, { x: mx, skewX: gsap.utils.clamp(-12, 12, -vel * 1.5) });
+});
+
+/* ---------- parallax ---------- */
+$$('[data-speed]').forEach(el => {
+  const sp = parseFloat(el.dataset.speed); if (!sp) return;
+  gsap.to(el, { y: () => -sp * innerHeight, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true } });
+});
+
+const mm = gsap.matchMedia();
+mm.add('(min-width: 900px) and (prefers-reduced-motion: no-preference)', () => {
+
+  /* collage entry */
+  gsap.from('.collage .frame', { clipPath: 'inset(50% 50% 50% 50%)', duration: 1.6, stagger: .12, ease: 'expo.out', scrollTrigger: { trigger: '.collage', start: 'top 75%' } });
+
+  /* mass pinned expand */
+  const massTl = gsap.timeline({ scrollTrigger: { trigger: '#massStage', start: 'top top', end: '+=180%', pin: true, scrub: 1 } });
+  massTl.fromTo('.mass-side.l', { y: '30vh', opacity: 0 }, { y: 0, opacity: 1, duration: .3 }, 0)
+    .fromTo('.mass-side.r', { y: '40vh', opacity: 0 }, { y: 0, opacity: 1, duration: .3 }, .05)
+    .to('#massImg', { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)', duration: 1, ease: 'power2.inOut' }, .35)
+    .to('#massImg img', { scale: 1, duration: 1, ease: 'power2.inOut' }, .35)
+    .to('.mass-side', { opacity: 0, duration: .2 }, 1)
+    .fromTo('#massQuote', { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: .4 }, 1.25)
+    .to({}, { duration: .3 });
+  massTl.eventCallback('onUpdate', () => { $('#massImg').style.setProperty('--q', massTl.progress()); });
+
+  /* horizontal portraits */
+  const track = $('#hTrack');
+  const dist = () => track.scrollWidth - innerWidth;
+  const hTween = gsap.to(track, { x: () => -dist(), ease: 'none',
+    scrollTrigger: { trigger: '#portraits', start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 1, invalidateOnRefresh: true,
+      onUpdate: s => gsap.set('#hBar', { scaleX: s.progress }) } });
+  $$('.h-item .frame img', track).forEach(img => {
+    gsap.fromTo(img, { xPercent: -7 }, { xPercent: 7, ease: 'none', scrollTrigger: { trigger: img.parentNode, containerAnimation: hTween, start: 'left right', end: 'right left', scrub: true } });
+  });
+  $$('.h-item', track).forEach(it => {
+    gsap.from(it, { yPercent: 18, opacity: 0, rotate: gsap.utils.random(-4, 4), duration: 1, ease: 'power3.out', scrollTrigger: { trigger: it, containerAnimation: hTween, start: 'left 92%' } });
+  });
+
+  /* XV */
+  gsap.timeline({ scrollTrigger: { trigger: '#xv', start: 'top top', end: '+=140%', pin: true, scrub: 1 } })
+    .fromTo('#xvWord', { scale: 2.6, backgroundPosition: '50% 10%' }, { scale: .82, backgroundPosition: '50% 60%', ease: 'power2.out' })
+    .fromTo('#xvSub', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .25 }, .7);
+
+  /* traditions */
+  gsap.from('.trad', { y: 140, opacity: 0, rotateX: -25, duration: 1.4, stagger: .14, ease: 'expo.out', scrollTrigger: { trigger: '.trad-grid', start: 'top 80%' } });
+  $$('.trad').forEach(card => {
+    const f = $('.frame', card);
+    card.addEventListener('mousemove', e => { const r = card.getBoundingClientRect(); const px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5; gsap.to(f, { rotateY: px * 14, rotateX: -py * 14, duration: .6, ease: 'power2.out', transformPerspective: 900 }); });
+    card.addEventListener('mouseleave', () => gsap.to(f, { rotateY: 0, rotateX: 0, duration: .9, ease: 'elastic.out(1,.5)' }));
+  });
+
+  /* waltz stack */
+  const cards = $$('.stack-card');
+  gsap.set(cards, { rotate: i => (i % 2 ? 1 : -1) * gsap.utils.random(1, 4) });
+  gsap.set(cards.slice(1), { yPercent: 140, opacity: 0 });
+  const wTl = gsap.timeline({ scrollTrigger: { trigger: '.waltz-stage', start: 'top top', end: () => '+=' + innerHeight * cards.length * .75, pin: true, scrub: 1,
+    onUpdate: s => { $('#waltzNum').textContent = String(Math.min(cards.length, 1 + Math.floor(s.progress * (cards.length - .01)))).padStart(2, '0'); } } });
+  cards.forEach((c, i) => {
+    if (!i) return;
+    wTl.to(c, { yPercent: 0, opacity: 1, rotate: gsap.utils.random(-5, 5), ease: 'power2.out', duration: 1 })
+       .to(cards[i - 1], { scale: .9, yPercent: -4, filter: 'brightness(.75)', duration: 1 }, '<');
+  });
+
+  /* surprise: letters + spotlight */
+  $$('.big-letters').forEach(h => gsap.from($$('span', h), { yPercent: 120, rotate: () => gsap.utils.random(-40, 40), opacity: 0, duration: 1.1, stagger: .045, ease: 'back.out(2.2)', scrollTrigger: { trigger: h.parentNode, start: 'top 75%' } }));
+  const sur = $('#surprise');
+  sur.addEventListener('mousemove', e => { const r = sur.getBoundingClientRect(); sur.style.setProperty('--mx', (e.clientX - r.left) + 'px'); sur.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+  gsap.from('.surprise-row .frame', { scale: .6, opacity: 0, duration: 1.3, stagger: .15, ease: 'expo.out', scrollTrigger: { trigger: '.surprise-row', start: 'top 80%' } });
+
+  /* party */
+  gsap.from('.bento .frame', { y: 90, opacity: 0, scale: .92, duration: 1.1, stagger: { each: .08, from: 'random' }, ease: 'power3.out', scrollTrigger: { trigger: '.bento', start: 'top 80%' } });
+  gsap.from('.neon', { scale: 1.4, opacity: 0, filter: 'blur(20px)', duration: 1.4, ease: 'expo.out', scrollTrigger: { trigger: '.neon', start: 'top 80%' } });
+
+  /* family polaroids: drop + drag */
+  const pols = $$('.pol');
+  gsap.set(pols, { rotate: i => +pols[i].dataset.r });
+  gsap.from(pols, { y: () => -innerHeight * .9, rotate: () => gsap.utils.random(-50, 50), opacity: 0, duration: 1.3, stagger: .1, ease: 'bounce.out', scrollTrigger: { trigger: '#table', start: 'top 70%' } });
+  let z = 10;
+  const drags = Draggable.create(pols, { bounds: '#family', inertia: false, zIndexBoost: false, minimumMovement: 6,
+    onPress() { this.target.style.zIndex = ++z; gsap.to(this.target, { scale: 1.06, rotate: 0, boxShadow: '0 40px 70px rgba(60,20,40,.35)', duration: .3 }); this.target.classList.add('grabbing'); },
+    onRelease() { gsap.to(this.target, { scale: 1, rotate: gsap.utils.random(-8, 8), boxShadow: '0 18px 40px rgba(60,20,40,.22)', duration: .5, ease: 'back.out(2)' }); this.target.classList.remove('grabbing'); },
+    onClick(e) { const img = $('img', this.target); openLb(img); }
+  });
+  pols.forEach(p => p.classList.add('grab'));
+
+  /* roots */
+  gsap.fromTo('#roots .bg img', { scale: 1.35 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '#roots', start: 'top bottom', end: 'bottom top', scrub: true } });
+  gsap.from('.roots-thumbs .frame', { y: 120, opacity: 0, duration: 1.2, stagger: .15, ease: 'power3.out', scrollTrigger: { trigger: '.roots-thumbs', start: 'top 95%' } });
+
+  /* finale arch */
+  gsap.fromTo('.finale-arch', { clipPath: 'inset(100% 0 0 0 round 999px 999px 26px 26px)' }, { clipPath: 'inset(0% 0 0 0 round 999px 999px 26px 26px)', duration: 1.8, ease: 'expo.out', scrollTrigger: { trigger: '#finale', start: 'top 60%' } });
+
+  return () => { drags.forEach(d => d.kill()); pols.forEach(p => p.classList.remove('grab')); };
+});
+
+/* simple reveal on small screens / reduced motion */
+mm.add('(max-width: 899px), (prefers-reduced-motion: reduce)', () => {
+  gsap.set('#massImg', { clipPath: 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)' });
+  gsap.set('#massImg img', { scale: 1 });
+  gsap.set('#massQuote', { opacity: 1 });
+  $$('.frame, .pol, .stack-card').forEach(el => gsap.from(el, { opacity: 0, y: 40, duration: .9, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 92%' } }));
+});
+
+/* mass dim overlay follows timeline progress */
+const massStyle = document.createElement('style');
+massStyle.textContent = '.mass-img::after{opacity:calc((var(--q,0) - .55) * 2.4)}';
+document.head.appendChild(massStyle);
+
+/* ---------- photobooth videos: play when visible ---------- */
+const io = new IntersectionObserver(entries => entries.forEach(en => {
+  const v = en.target;
+  if (en.isIntersecting) { if (!v.src) v.src = v.dataset.src; v.play().catch(() => {}); } else v.pause();
+}), { rootMargin: '200px' });
+$$('.booth-vid video').forEach(v => io.observe(v));
+gsap.from('.booth-vid', { opacity: 0, scale: .85, y: 60, duration: 1.1, stagger: .09, ease: 'expo.out', scrollTrigger: { trigger: '.booth-center', start: 'top 80%' } });
+
+/* ---------- confetti ---------- */
+const cf = $('#confetti'), cx = cf.getContext('2d');
+let pieces = [], cfRun = false;
+function burst() {
+  cf.width = cf.offsetWidth * devicePixelRatio; cf.height = cf.offsetHeight * devicePixelRatio;
+  const cols = ['#F1D79A', '#C8A15A', '#F2B9C8', '#FFFFFF', '#D98FA5'];
+  pieces = Array.from({ length: 180 }, () => ({ x: cf.width * (.2 + Math.random() * .6), y: cf.height * .55, vx: (Math.random() - .5) * 18 * devicePixelRatio, vy: -(Math.random() * 16 + 8) * devicePixelRatio, w: (Math.random() * 8 + 4) * devicePixelRatio, h: (Math.random() * 5 + 3) * devicePixelRatio, r: Math.random() * 6, vr: (Math.random() - .5) * .3, c: cols[Math.random() * cols.length | 0], life: 1 }));
+  if (!cfRun) { cfRun = true; stepCf(); }
+}
+function stepCf() {
+  cx.clearRect(0, 0, cf.width, cf.height);
+  pieces.forEach(p => { p.vy += .35 * devicePixelRatio; p.vx *= .985; p.x += p.vx; p.y += p.vy; p.r += p.vr; p.life -= .004;
+    cx.save(); cx.globalAlpha = Math.max(p.life, 0); cx.translate(p.x, p.y); cx.rotate(p.r); cx.fillStyle = p.c; cx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h * Math.abs(Math.cos(p.r * 2))); cx.restore(); });
+  pieces = pieces.filter(p => p.y < cf.height + 40 && p.life > 0);
+  if (pieces.length) requestAnimationFrame(stepCf); else { cfRun = false; cx.clearRect(0, 0, cf.width, cf.height); }
+}
+if (!reduce) ScrollTrigger.create({ trigger: '#finale', start: 'top 45%', onEnter: burst, onEnterBack: burst });
+ScrollTrigger.create({ trigger: '#finale', start: 'top 60%', end: 'bottom top', onToggle: s => { sparkleBoost = s.isActive ? 2 : .7; } });
+
+$('#replayBtn').addEventListener('click', () => {
+  video.muted = false;
+  if (lenis) lenis.scrollTo(0, { duration: 2.4, onComplete: playIntro }); else { scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(playIntro, 900); }
+});
+
+/* ---------- cursor ---------- */
+if (matchMedia('(hover:hover) and (min-width:900px)').matches) {
+  const cur = $('#cursor'), ring = $('#cursorRing');
+  const xTo = gsap.quickTo(cur, 'x', { duration: .08 }), yTo = gsap.quickTo(cur, 'y', { duration: .08 });
+  const rxTo = gsap.quickTo(ring, 'x', { duration: .45, ease: 'power3' }), ryTo = gsap.quickTo(ring, 'y', { duration: .45, ease: 'power3' });
+  addEventListener('mousemove', e => { xTo(e.clientX); yTo(e.clientY); rxTo(e.clientX); ryTo(e.clientY); });
+  document.addEventListener('mouseover', e => ring.classList.toggle('view', !!e.target.closest('[data-lb], .pol, .seal')));
+  document.body.style.cursor = 'none';
+  const st = document.createElement('style'); st.textContent = '@media (hover:hover) and (min-width:900px){a,button,[data-lb],.pol{cursor:none!important}}'; document.head.appendChild(st);
+}
+
+initLightbox();
+
+/* ---------- lightbox ---------- */
+function initLightbox() {
+  const lb = $('#lb'), lbImg = $('#lbImg');
+  const list = () => $$('[data-lb]').filter(i => i.closest('.lang') === null);
+  let idx = 0;
+  window.openLb = img => {
+    const l = list(); idx = Math.max(0, l.indexOf(img)); show(); lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); lenis && lenis.stop();
+  };
+  function show() {
+    const l = list(), el = l[idx];
+    lbImg.src = el.dataset.full || el.src;
+    $('#lbCount').textContent = `${idx + 1} / ${l.length}`;
+    if (window.gsap) gsap.fromTo(lbImg, { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .5, ease: 'power3.out' });
+  }
+  function close() { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); lenis && lenis.start(); }
+  const go = d => { const n = list().length; idx = (idx + d + n) % n; show(); };
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-lb]');
+    if (t && !t.closest('.pol.grab') && !lb.classList.contains('open')) openLb(t);
+  });
+  $('#lbPrev').onclick = e => { e.stopPropagation(); go(-1); };
+  $('#lbNext').onclick = e => { e.stopPropagation(); go(1); };
+  $('#lbClose').onclick = close;
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  addEventListener('keydown', e => { if (!lb.classList.contains('open')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1); });
+  const gb = $('#galleryBtn'); if (gb) gb.onclick = () => openLb(list()[0]);
+}
+function openLb(img) { window.openLb(img); }
+
+addEventListener('load', () => ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
