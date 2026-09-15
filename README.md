@@ -8,6 +8,7 @@ Built by [REGO Agency](https://regoagency.my.canva.site/xvkimmy).
 - Opens with a wax-sealed envelope, then Kimberly's video message
 - Ten chapters: getting ready, the Mass, portraits, traditions, the waltz,
   the surprise dance, hora loca, family, photobooth and folklórico
+- Background music (looping excerpt of Zoé — "Luna", MTV Unplugged), muted-able from the top bar
 - English / Spanish toggle, full-screen photo viewer, 67 photos + 7 videos
 
 Not indexed by search engines (see `robots.txt` and the `noindex` meta tag).

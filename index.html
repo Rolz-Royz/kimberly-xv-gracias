@@ -57,6 +57,17 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 .lang{display:flex;gap:4px;font-size:12px;letter-spacing:.2em;border:1px solid rgba(255,255,255,.6);border-radius:99px;padding:4px}
 .lang button{padding:6px 12px;border-radius:99px;transition:background .3s,color .3s}
 .lang button.on{background:#fff;color:#000}
+.bar-right{display:flex;align-items:center;gap:14px}
+.music-btn{display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;border:1px solid rgba(255,255,255,.6);border-radius:99px;padding:8px 16px;transition:background .3s,opacity .3s}
+.music-btn:hover{background:rgba(255,255,255,.14)}
+.music-btn.off{opacity:.5}
+.eq{display:flex;align-items:flex-end;gap:2px;height:11px}
+.eq i{width:2px;height:100%;background:currentColor;transform-origin:50% 100%;transform:scaleY(.25)}
+.music-btn.on .eq i{animation:eq .7s ease-in-out infinite alternate}
+.music-btn.on .eq i:nth-child(2){animation-delay:.18s}
+.music-btn.on .eq i:nth-child(3){animation-delay:.36s}
+@keyframes eq{from{transform:scaleY(.25)}to{transform:scaleY(1)}}
+@media (max-width:899px){.mlbl{display:none!important}.music-btn{padding:8px 11px;letter-spacing:0}}
 .progress{position:fixed;left:0;top:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--gold-grad);z-index:96}
 
 /* cursor */
@@ -386,10 +397,14 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 
 <header class="topbar">
   <div class="brand">Kimberly</div>
+  <div class="bar-right">
+  <button class="music-btn" id="musicBtn" aria-label="Music"><span class="eq"><i></i><i></i><i></i></span><span class="mlbl en">Music</span><span class="mlbl es">Música</span></button>
   <div class="lang" role="group" aria-label="Language">
     <button data-lang="en" class="on">EN</button><button data-lang="es">ES</button>
   </div>
+  </div>
 </header>
+<audio id="bgm" src="audio/luna.mp3" loop preload="none"></audio>
 
 <!-- ================= GATE ================= -->
 <div id="gate">
@@ -780,6 +795,37 @@ function drawS() {
 }
 if (!reduce) drawS();
 
+/* ---------- background music ---------- */
+const bgm = $('#bgm'), musicBtn = $('#musicBtn');
+const MUSIC_VOL = .45, DUCK_VOL = .06;
+let musicOn = true; try { musicOn = localStorage.getItem('kxv-music') !== 'off'; } catch (e) {}
+let musicStarted = false;
+bgm.volume = 0;
+function fadeTo(v, d) {
+  if (window.gsap) gsap.to(bgm, { volume: v, duration: d, ease: 'power1.inOut', overwrite: true });
+  else bgm.volume = v;
+}
+function startMusic() {
+  if (!musicOn || musicStarted) return;
+  musicStarted = true; bgm.volume = 0;
+  const p = bgm.play();
+  if (p && p.catch) p.catch(() => { musicStarted = false; });
+  fadeTo((video.paused || video.ended || video.muted) ? MUSIC_VOL : DUCK_VOL, 3.5);
+  setTimeout(paintMusicBtn, 200);
+}
+function paintMusicBtn() {
+  musicBtn.classList.toggle('on', musicOn && !bgm.paused);
+  musicBtn.classList.toggle('off', !musicOn);
+}
+musicBtn.addEventListener('click', () => {
+  musicOn = !musicOn;
+  try { localStorage.setItem('kxv-music', musicOn ? 'on' : 'off'); } catch (e) {}
+  if (musicOn) { musicStarted = false; startMusic(); }
+  else { fadeTo(0, .7); setTimeout(() => { if (!musicOn) { bgm.pause(); musicStarted = false; paintMusicBtn(); } }, 760); }
+  paintMusicBtn();
+});
+paintMusicBtn();
+
 /* ---------- intro video + blurred bg ---------- */
 const video = $('#introVideo'), bg = $('#introBg'), bgx = bg.getContext('2d'), soundBtn = $('#soundBtn');
 const poster = new Image(); poster.src = 'video/intro-poster.jpg'; poster.onload = () => bgx.drawImage(poster, 0, 0, 90, 160);
@@ -793,13 +839,16 @@ function playIntro() {
   if (p && p.catch) p.catch(() => { video.muted = true; video.play(); updateSound(); });
   updateSound();
 }
+video.addEventListener('play', () => { if (!video.muted) fadeTo(DUCK_VOL, .8); });
+video.addEventListener('pause', () => { if (musicOn && !bgm.paused) fadeTo(MUSIC_VOL, 2); });
 video.addEventListener('ended', () => {
+  if (musicOn && !bgm.paused) fadeTo(MUSIC_VOL, 3);
   if (hasGsap) gsap.to('#kiss', { opacity: 1, duration: 1.2, ease: 'power2.out' }); else $('#kiss').style.opacity = 1;
 });
 
 /* ---------- no-GSAP fallback ---------- */
 if (!hasGsap) {
-  $('#seal').addEventListener('click', () => { $('#gate').remove(); document.body.classList.remove('locked'); $('#scrollCue').style.display = 'block'; playIntro(); });
+  $('#seal').addEventListener('click', () => { $('#gate').remove(); document.body.classList.remove('locked'); $('#scrollCue').style.display = 'block'; startMusic(); playIntro(); });
   $$('.mass-img').forEach(m => m.style.clipPath = 'none');
   $('#massQuote').style.opacity = 1;
   initLightbox();
@@ -832,6 +881,7 @@ function openEnvelope() {
   if (opened) return; opened = true;
   // unlock audio within the gesture
   video.muted = false; video.play().then(() => { video.pause(); video.currentTime = 0; }).catch(() => {});
+  startMusic();
   const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } });
   tl.to('.gate-hint, .gate-top', { opacity: 0, duration: .4 })
     .to('#seal', { scale: 1.18, duration: .18, ease: 'power2.out' }, 0)
@@ -842,7 +892,7 @@ function openEnvelope() {
     .to('#envelope', { scale: 1.08, duration: 1.2, ease: 'power2.out' }, 1.1)
     .to('#envelope', { y: '8vh', duration: .7, ease: 'power2.in' }, 2.7)
     .to('#gate', { autoAlpha: 0, duration: .9, ease: 'power2.inOut', onStart: () => { sparkleBoost = 2.4; } }, 2.9)
-    .add(() => { $('#gate').remove(); document.body.classList.remove('locked'); lenis && lenis.start(); ScrollTrigger.refresh(); playIntro(); }, 3.6)
+    .add(() => { $('#gate').remove(); document.body.classList.remove('locked'); lenis && lenis.start(); ScrollTrigger.refresh(); playIntro(); paintMusicBtn(); }, 3.6)
     .to('#intro .arch-wrap', { opacity: 1, scale: 1, y: 0, duration: 1.6, ease: 'expo.out' }, 3.3)
     .to('.intro-side > *', { opacity: 1, y: 0, duration: 1.2, stagger: .12, ease: 'power3.out' }, 3.8)
     .to('#introGracias', { clipPath: 'inset(0 0% 0 0)', duration: 2.4, ease: 'power2.inOut' }, 4.3)
