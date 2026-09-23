@@ -343,6 +343,7 @@ html[lang=en] .intro-gracias{font-size:clamp(88px,12vw,200px)}
   .topbar{padding:14px 16px}
   .intro-grid{grid-template-columns:1fr;justify-items:center;align-content:center;gap:18px;padding:70px 16px}
   .intro-side{display:none}
+  .arch-motion,.arch-wrap{margin-left:auto!important;margin-right:auto!important;justify-self:center!important}
   .arch{height:62vh;height:62dvh}
   .intro-gracias{font-size:26vw;bottom:calc(8vh - .12em);bottom:calc(8dvh - .12em)}
   html[lang=en] .intro-gracias{font-size:19vw}
@@ -1167,10 +1168,11 @@ if (/[?&]debug/.test(location.search)) (function(){
     const cs = getComputedStyle(el);
     return [
       sel + ':',
-      '  rect  top=' + px(r.top) + ' left=' + px(r.left) + ' w=' + px(r.width) + ' h=' + px(r.height),
+      '  rect  top=' + px(r.top) + ' left=' + px(r.left) + ' right=' + px(innerWidth - r.right) + ' w=' + px(r.width) + ' h=' + px(r.height),
       '  css   height=' + cs.height + ' width=' + cs.width + ' aspect-ratio=' + cs.aspectRatio,
       '  css   transform=' + cs.transform,
-      '  css   padding=' + cs.padding + ' border-radius=' + cs.borderRadius
+      '  css   padding=' + cs.padding + ' border-radius=' + cs.borderRadius,
+      '  css   justify-self=' + cs.justifySelf + ' margin=' + cs.margin + ' display=' + cs.display
     ];
   }
   function report(){
@@ -1191,6 +1193,9 @@ if (/[?&]debug/.test(location.search)) (function(){
       '',
       '1vh in px (innerHeight/100): ' + px(innerHeight/100),
       '1vw in px (innerWidth/100): ' + px(innerWidth/100),
+      'matchMedia(max-width:899px): ' + matchMedia('(max-width:899px)').matches,
+      '',
+      '.intro-grid computed: gridTemplateColumns=' + getComputedStyle(document.querySelector('.intro-grid')).gridTemplateColumns + ' justifyItems=' + getComputedStyle(document.querySelector('.intro-grid')).justifyItems,
       ''
     ];
     ['#intro', '.intro-grid', '.arch-wrap', '.arch', '#kiss', '#introVideo'].forEach(function(sel){
