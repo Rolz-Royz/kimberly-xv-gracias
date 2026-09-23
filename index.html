@@ -36,7 +36,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 
 /* ---------- shared ---------- */
 .eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.38em;text-transform:uppercase;font-weight:400;color:var(--rosegold)}
-.script{font-family:var(--script);font-weight:400;line-height:1}
+.script{font-family:var(--script);font-weight:400;line-height:1;padding-block:.2em .12em;margin-block:-.2em -.12em}
 .gold-text{background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s linear infinite}
 @keyframes shimmer{to{background-position:-200% 0}}
 .h-display{font-family:var(--serif);font-weight:400;line-height:.95;letter-spacing:-.01em}
@@ -125,7 +125,8 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 .arch-wrap::before{content:"";position:absolute;inset:-12px;border-radius:999px 999px 34px 34px;border:1px solid rgba(241,215,154,.22)}
 .arch video,.arch img{width:100%;height:100%;object-fit:cover}
 .arch .kiss{position:absolute;inset:0;opacity:0}
-.intro-gracias{position:absolute;left:0;right:0;margin:auto;width:max-content;bottom:4vh;z-index:3;font-size:clamp(110px,15vw,250px);white-space:nowrap;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5));padding:0 .2em}
+.intro-gracias{position:absolute;left:0;right:0;margin:auto;width:max-content;bottom:calc(4vh - .12em);z-index:3;font-size:clamp(110px,15vw,250px);white-space:nowrap;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5));padding:.2em .2em .12em}
+html[lang=en] .intro-gracias{font-size:clamp(88px,12vw,200px)}
 .sound{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:10px 18px;transition:background .3s}
 .sound:hover{background:rgba(255,255,255,.1)}
 .bars{display:flex;gap:2px;align-items:flex-end;height:12px}
@@ -145,7 +146,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 .letter-body .h-display{font-size:clamp(46px,5vw,86px);margin:22px 0 38px}
 .letter-text p{font-family:var(--serif);font-size:clamp(21px,1.75vw,29px);line-height:1.5;color:var(--ink);margin-bottom:.9em}
 .letter-text .w{display:inline-block;white-space:pre}
-.signature{font-size:clamp(70px,7vw,120px);color:var(--rose);margin-top:18px;display:inline-block;padding-right:.3em}
+.signature{font-size:clamp(70px,7vw,120px);color:var(--rose);margin-top:calc(18px - .2em);display:inline-block;padding-right:.3em}
 
 /* ---------- MARQUEE ---------- */
 .marquee{overflow:hidden;padding:5vh 0;background:var(--ivory);border-top:1px solid rgba(201,150,122,.25);border-bottom:1px solid rgba(201,150,122,.25)}
@@ -344,6 +345,8 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
   .intro-side{display:none}
   .arch{height:62vh;height:62dvh}
   .intro-gracias{font-size:26vw;bottom:calc(8vh - .12em);bottom:calc(8dvh - .12em)}
+  html[lang=en] .intro-gracias{font-size:19vw}
+  .scroll-cue{display:none!important}
   #letter{grid-template-columns:1fr;padding:12vh 16px}
   .letter-photo{height:70vh}
   .letter-photo-tag{left:10px}
@@ -417,7 +420,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
       <div class="env-back"></div>
       <div class="env-letter" id="envLetter">
         <div class="eyebrow">XV Años · 29 · 08 · 2026</div>
-        <div class="script gold-text">Gracias</div>
+        <div class="script gold-text"><span class="en">Thank you</span><span class="es">Gracias</span></div>
         <p><span class="en">for being part of my story</span><span class="es">por ser parte de mi historia</span></p>
       </div>
       <div class="env-front"></div>
@@ -425,14 +428,22 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
       <button class="seal" id="seal" aria-label="Open">
         <svg viewBox="0 0 200 200" aria-hidden="true">
           <defs>
-            <radialGradient id="wax" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#FFEAF0"/><stop offset=".55" stop-color="#F4BFCD"/><stop offset="1" stop-color="#D88AA2"/></radialGradient>
-            <linearGradient id="goldg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A6A2F"/><stop offset=".42" stop-color="#F6DFA6"/><stop offset=".62" stop-color="#B8893F"/><stop offset="1" stop-color="#EBCB85"/></linearGradient>
-            <filter id="wob"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="10"/></filter>
+            <radialGradient id="wax" cx="36%" cy="28%" r="78%"><stop offset="0" stop-color="#FFF1F4"/><stop offset=".5" stop-color="#F3BCCB"/><stop offset=".86" stop-color="#DE93AA"/><stop offset="1" stop-color="#C87C95"/></radialGradient>
+            <linearGradient id="goldg" x1=".15" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#A97C33"/><stop offset=".22" stop-color="#F7E3AC"/><stop offset=".45" stop-color="#C79A45"/><stop offset=".63" stop-color="#FBEDC4"/><stop offset=".82" stop-color="#B98C3C"/><stop offset="1" stop-color="#E8CB86"/></linearGradient>
+            <filter id="wob"><feTurbulence type="fractalNoise" baseFrequency=".022" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter>
+            <filter id="press" x="-25%" y="-25%" width="150%" height="150%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="1.6" result="b"/><feOffset in="b" dy="1.4" result="o"/>
+              <feComposite in="o" in2="SourceAlpha" operator="out" result="sh"/>
+              <feFlood flood-color="#6E3A22" flood-opacity=".55"/><feComposite in2="sh" operator="in" result="shadow"/>
+              <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="shadow"/></feMerge>
+            </filter>
           </defs>
-          <circle cx="100" cy="100" r="92" fill="url(#wax)" filter="url(#wob)"/>
-          <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(170,80,110,.25)" stroke-width="6"/>
-          <circle cx="100" cy="100" r="66" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.5"/>
-          <text x="102" y="130" text-anchor="middle" font-family="Great Vibes, cursive" font-size="112" fill="url(#goldg)">K</text>
+          <circle cx="100" cy="100" r="93" fill="url(#wax)" filter="url(#wob)"/>
+          <circle cx="100" cy="100" r="76" fill="none" stroke="rgba(150,70,100,.20)" stroke-width="9"/>
+          <circle cx="100" cy="100" r="71.5" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.3"/>
+          <circle cx="100" cy="100" r="80.5" fill="none" stroke="rgba(255,255,255,.26)" stroke-width="1"/>
+          <!-- Great Vibes K as a path, centred on its real ink box (the font metrics are lopsided) -->
+          <path d="M129.77 140.40Q124.33 140.40 119.23 137.01Q114.13 133.63 110.55 125.77Q108.99 122.26 108.02 118.68Q107.04 115.10 106.58 111.99Q106.11 108.87 106.11 106.85Q106.11 104.36 106.66 104.05Q108.13 104.20 111.60 102.80Q115.06 101.40 119.85 98.68Q124.64 95.95 130.20 92.10Q135.77 88.25 141.41 83.42Q147.06 78.59 152.27 72.99Q157.49 67.38 161.46 61.23Q162 60.38 162.31 59.99Q162.62 59.60 162.94 59.60Q163.32 59.60 163.64 59.95Q163.95 60.30 163.95 60.69Q163.95 61.31 163.40 62.17Q159.67 68.40 154.57 74.35Q149.47 80.31 143.71 85.52Q137.95 90.74 132.11 94.94Q126.27 99.14 120.98 101.95Q115.69 104.75 111.64 105.76Q111.40 105.60 111.40 106.54Q111.40 107.86 111.95 110.78Q112.49 113.70 113.62 117.40Q114.75 121.10 116.39 124.91Q119.34 131.84 123.35 134.45Q127.36 137.05 131.64 137.05Q134.37 137.05 137.25 135.96Q140.13 134.87 142.54 132.97Q144.95 131.06 146.28 128.49Q146.74 127.71 146.98 127.71Q147.52 127.71 147.52 128.33Q147.52 128.57 147.41 128.84Q147.29 129.11 146.90 129.97Q145.81 132.15 143.28 134.60Q140.75 137.05 137.29 138.73Q133.82 140.40 129.77 140.40M63.69 139.39Q58.39 139.39 53.45 137.95Q48.51 136.51 44.58 133.71Q40.65 130.90 38.35 126.86Q36.05 122.81 36.05 117.67Q36.05 113.93 37.18 111.01Q38.31 108.10 39.98 106.15Q41.66 104.20 43.33 103.19Q45 102.18 46.09 102.18Q46.87 102.18 46.87 102.65Q46.87 103.04 46.48 103.27Q44.69 104.20 42.83 105.99Q40.96 107.78 39.71 110.66Q38.47 113.54 38.47 117.83Q38.47 122.50 40.45 125.80Q42.44 129.11 45.67 131.21Q48.90 133.32 52.63 134.29Q56.37 135.26 59.79 135.26Q67.42 135.26 74.04 132.30Q80.66 129.35 86.14 124.40Q91.63 119.46 95.84 113.39Q100.04 107.32 102.76 101.09Q103.78 98.83 105.18 95.68Q106.58 92.53 108.21 88.95Q109.85 85.37 111.40 81.94Q112.96 78.52 114.25 75.75Q115.53 72.99 116.31 71.51Q111.09 72.13 105.06 72.64Q99.03 73.14 93.58 74.70Q87.51 76.41 83.65 79.68Q79.80 82.95 77.97 86.77Q76.14 90.58 76.14 93.93Q76.14 97.98 78.17 100.58Q80.19 103.19 84 103.19Q86.88 103.19 89.14 101.52Q91.40 99.84 92.72 97.16Q94.05 94.47 94.05 91.44Q94.05 90.19 93.81 89.34Q93.58 88.48 93.58 88.01Q93.58 87.47 93.97 87.47Q94.51 87.47 94.98 88.40Q95.76 90.19 95.76 91.90Q95.76 95.56 93.97 98.48Q92.18 101.40 89.37 103.11Q86.57 104.83 83.46 104.83Q79.80 104.83 77.11 103.07Q74.43 101.32 72.95 98.44Q71.47 95.56 71.47 92.22Q71.47 88.40 73.57 84.47Q75.67 80.54 80.34 77.31Q85.02 74.08 92.64 72.37Q99.03 70.96 105.64 70.54Q112.26 70.11 117.32 69.64Q120.04 65.44 121.76 64.31Q123.47 63.18 124.87 63.18Q126.27 63.18 127.09 63.96Q127.91 64.74 127.91 65.83Q127.91 67.38 125.77 69.14Q123.63 70.89 118.57 71.43Q116.07 76.02 113.97 81.67Q111.87 87.31 109.77 93.46Q107.67 99.61 105.18 105.68Q100.97 115.80 95.21 123.39Q89.45 130.98 81.67 135.18Q73.88 139.39 63.69 139.39M120.04 69.49Q121.99 69.33 123.78 68.36Q125.57 67.38 125.57 66.22Q125.57 65.44 124.79 65.44Q124.09 65.44 122.85 66.33Q121.60 67.23 120.04 69.49" fill="url(#goldg)" filter="url(#press)"/>
         </svg>
       </button>
     </div>
@@ -462,7 +473,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
       <button class="sound" id="soundBtn"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lbl">Sound</span></button>
     </div>
   </div>
-  <div class="intro-gracias script gold-text" id="introGracias">Gracias</div>
+  <div class="intro-gracias script gold-text" id="introGracias"><span class="en">Thank you</span><span class="es">Gracias</span></div>
   <div class="scroll-cue" id="scrollCue"><span class="en">Scroll</span><span class="es">Desliza</span></div>
 </section>
 
@@ -558,7 +569,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
     <div class="h-item" style="--h:56vh;--ar:3/2"><div class="frame"><img loading="lazy" src="img/sm/doe-532.jpg" data-full="img/doe-532.jpg" data-lb alt=""></div><div class="h-cap">13 — <span class="en">The fountain</span><span class="es">La fuente</span></div></div>
     <div class="h-item up" style="--h:66vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-117.jpg" data-full="img/ed-117.jpg" data-lb alt=""></div><div class="h-cap">14</div></div>
     <div class="h-outro">
-      <div class="script gold-text">fifteen</div>
+      <div class="script gold-text"><span class="en">fifteen</span><span class="es">quince</span></div>
       <div class="eyebrow" style="color:var(--gold-hi);margin-top:10px"><span class="en">and feeling like royalty</span><span class="es">y sintiéndome de la realeza</span></div>
     </div>
   </div>
@@ -760,6 +771,10 @@ function setLang(l) {
   root.lang = l;
   $$('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
   try { localStorage.setItem('kxv-lang', l); } catch (e) {}
+  if (window.gsap) {
+    const g = document.getElementById('introGracias');
+    if (g && g.dataset.written) gsap.set(g, { clipPath: 'inset(0 0% 0 0)' });
+  }
   if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
 }
 let saved = null; try { saved = localStorage.getItem('kxv-lang'); } catch (e) {}
@@ -914,7 +929,7 @@ function openEnvelope() {
     .add(() => { $('#gate').remove(); document.body.classList.remove('locked'); lenis && lenis.start(); ScrollTrigger.refresh(); playIntro(); paintMusicBtn(); }, 3.6)
     .to('#intro .arch-wrap', { opacity: 1, scale: 1, y: 0, duration: 1.6, ease: 'expo.out' }, 3.3)
     .to('.intro-side > *', { opacity: 1, y: 0, duration: 1.2, stagger: .12, ease: 'power3.out' }, 3.8)
-    .to('#introGracias', { clipPath: 'inset(0 0% 0 0)', duration: 2.4, ease: 'power2.inOut' }, 4.3)
+    .to('#introGracias', { clipPath: 'inset(0 0% 0 0)', duration: 2.4, ease: 'power2.inOut', onComplete: () => { $('#introGracias').dataset.written = '1'; } }, 4.3)
     .add(() => { $('#scrollCue').style.display = 'block'; gsap.from('#scrollCue', { opacity: 0, duration: 1 }); sparkleBoost = 1.3; }, 6.2);
 }
 
