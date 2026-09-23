@@ -121,6 +121,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 .intro-side .h-display{font-size:clamp(34px,3.6vw,62px)}
 .intro-side .h-display em{color:var(--gold-hi)}
 .arch{position:relative;height:min(76vh,860px);aspect-ratio:9/16;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 50px 120px rgba(0,0,0,.55);-webkit-mask-image:-webkit-radial-gradient(circle,#fff 100%,#000 100%);mask-image:radial-gradient(circle,#fff 100%,#000 100%);transform:translateZ(0);-webkit-transform:translateZ(0);isolation:isolate}
+.arch-motion{display:inline-block}
 .arch-wrap{position:relative;padding:12px;border-radius:999px 999px 26px 26px;border:1px solid rgba(241,215,154,.55)}
 .arch-wrap::before{content:"";position:absolute;inset:-12px;border-radius:999px 999px 34px 34px;border:1px solid rgba(241,215,154,.22)}
 .arch video,.arch img{width:100%;height:100%;object-fit:cover;border-radius:inherit;-webkit-transform:translateZ(0);transform:translateZ(0)}
@@ -461,11 +462,13 @@ html[lang=en] .intro-gracias{font-size:clamp(88px,12vw,200px)}
       <div class="eyebrow" style="color:var(--gold-hi)">XV Años</div>
       <h1 class="h-display reveal-up"><span class="en">Thank you<br>for being part<br>of my <em>fifteen</em></span><span class="es">Gracias<br>por ser parte<br>de mis <em>quince</em></span></h1>
     </div>
+    <div class="arch-motion">
     <div class="arch-wrap">
       <div class="arch">
         <video id="introVideo" src="video/intro.mp4" poster="video/intro-poster.jpg" muted playsinline preload="auto"></video>
         <img class="kiss" id="kiss" src="video/intro-kiss.jpg" alt="">
       </div>
+    </div>
     </div>
     <div class="intro-side right">
       <div class="eyebrow" style="color:var(--gold-hi)">29 · 08 · 2026</div>
@@ -889,7 +892,7 @@ gsap.to('#progress', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 
 /* ---------- intro pre-states ---------- */
 gsap.set('#introGracias', { clipPath: 'inset(0 100% 0 0)' });
 gsap.set('.intro-side > *', { opacity: 0, y: 30 });
-gsap.set('#intro .arch-wrap', { opacity: 0, scale: .9, y: 40 });
+gsap.set('#intro .arch-motion', { opacity: 0, scale: .9, y: 40 });
 
 /* ---------- open envelope ---------- */
 let opened = false;
@@ -909,14 +912,14 @@ function openEnvelope() {
     .to('#envelope', { y: '8vh', duration: .7, ease: 'power2.in' }, 2.7)
     .to('#gate', { autoAlpha: 0, duration: .9, ease: 'power2.inOut', onStart: () => { sparkleBoost = 2.4; } }, 2.9)
     .add(() => { $('#gate').remove(); document.body.classList.remove('locked'); lenis && lenis.start(); ScrollTrigger.refresh(); playIntro(); paintMusicBtn(); }, 3.6)
-    .to('#intro .arch-wrap', { opacity: 1, scale: 1, y: 0, duration: 1.6, ease: 'expo.out' }, 3.3)
+    .to('#intro .arch-motion', { opacity: 1, scale: 1, y: 0, duration: 1.6, ease: 'expo.out' }, 3.3)
     .to('.intro-side > *', { opacity: 1, y: 0, duration: 1.2, stagger: .12, ease: 'power3.out' }, 3.8)
     .to('#introGracias', { clipPath: 'inset(0 0% 0 0)', duration: 2.4, ease: 'power2.inOut', onComplete: () => { $('#introGracias').dataset.written = '1'; } }, 4.3)
     .add(() => { $('#scrollCue').style.display = 'block'; gsap.from('#scrollCue', { opacity: 0, duration: 1 }); sparkleBoost = 1.3; }, 6.2);
 }
 
 /* ---------- intro scroll-out ---------- */
-gsap.to('#intro .arch-wrap', { yPercent: -12, scale: .92, ease: 'none', scrollTrigger: { trigger: '#intro', start: 'top top', end: 'bottom top', scrub: true } });
+gsap.to('#intro .arch-motion', { yPercent: -12, scale: .92, ease: 'none', scrollTrigger: { trigger: '#intro', start: 'top top', end: 'bottom top', scrub: true } });
 gsap.to('#introGracias', { yPercent: 60, opacity: 0, ease: 'none', scrollTrigger: { trigger: '#intro', start: 'top top', end: 'bottom top', scrub: true } });
 ScrollTrigger.create({ trigger: '#intro', start: 'bottom 40%', onLeave: () => { video.pause(); sparkleBoost = .7; }, onEnterBack: () => { sparkleBoost = 1.3; if (!video.ended) video.play().catch(() => {}); } });
 
