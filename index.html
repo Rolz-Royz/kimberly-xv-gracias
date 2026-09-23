@@ -597,7 +597,7 @@ html[lang=en] .intro-gracias{font-size:clamp(88px,12vw,200px)}
   <div class="trad-grid">
     <article class="trad"><div class="num">i</div><div class="frame"><img loading="lazy" src="img/sm/doe-922.jpg" data-full="img/doe-922.jpg" data-lb alt=""></div><h3><span class="en">The shoes</span><span class="es">Las zapatillas</span></h3><p><span class="en">From girl to young woman, one step at a time.</span><span class="es">De niña a señorita, un paso a la vez.</span></p></article>
     <article class="trad"><div class="num">ii</div><div class="frame"><img loading="lazy" src="img/sm/doe-944.jpg" data-full="img/doe-944.jpg" data-lb alt=""></div><h3><span class="en">The last doll</span><span class="es">La última muñeca</span></h3><p><span class="en">A sweet goodbye to childhood.</span><span class="es">Un dulce adiós a la infancia.</span></p></article>
-    <article class="trad"><div class="num">iii</div><div class="frame"><img loading="lazy" src="img/sm/doe-915.jpg" data-full="img/doe-915.jpg" data-lb alt=""></div><h3><span class="en">The ring</span><span class="es">El anillo</span></h3><p><span class="en">A promise to carry forever.</span><span class="es">Una promesa para siempre.</span></p></article>
+    <article class="trad"><div class="num">iii</div><div class="frame"><img loading="lazy" src="img/sm/doe-915.jpg" data-full="img/doe-915.jpg" data-lb alt=""></div><h3><span class="en">The esclava</span><span class="es">La esclava</span></h3><p><span class="en">A traditional bracelet, a gift to treasure.</span><span class="es">Un regalo tradicional para atesorar.</span></p></article>
     <article class="trad"><div class="num">iv</div><div class="frame"><img loading="lazy" src="img/sm/doe-776.jpg" data-full="img/doe-776.jpg" data-lb alt=""></div><h3>Mariachi</h3><p><span class="en">Because no fiesta is complete without it.</span><span class="es">Porque no hay fiesta sin mariachi.</span></p></article>
   </div>
 </section>
@@ -1008,7 +1008,8 @@ mm.add('(min-width: 900px) and (prefers-reduced-motion: no-preference)', () => {
     .fromTo('#xvSub', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .25 }, .7);
 
   /* traditions */
-  gsap.from('.trad', { y: 140, opacity: 0, rotateX: -25, duration: 1.4, stagger: .14, ease: 'expo.out', scrollTrigger: { trigger: '.trad-grid', start: 'top 80%' } });
+  gsap.set('.trad', { y: 140, opacity: 0, rotateX: -25, transformPerspective: 900 });
+  gsap.to('.trad', { y: 0, opacity: 1, rotateX: 0, duration: 1.4, stagger: .14, ease: 'expo.out', scrollTrigger: { trigger: '.trad-grid', start: 'top 80%' } });
   $$('.trad').forEach(card => {
     const f = $('.frame', card);
     card.addEventListener('mousemove', e => { const r = card.getBoundingClientRect(); const px = (e.clientX - r.left) / r.width - .5, py = (e.clientY - r.top) / r.height - .5; gsap.to(f, { rotateY: px * 14, rotateX: -py * 14, duration: .6, ease: 'power2.out', transformPerspective: 900 }); });
