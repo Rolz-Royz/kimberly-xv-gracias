@@ -1115,5 +1115,71 @@ function openLb(img) { window.openLb(img); }
 addEventListener('load', () => ScrollTrigger.refresh());
 })();
 </script>
+<script>
+if (/[?&]debug/.test(location.search)) (function(){
+  const box = document.createElement('pre');
+  box.id = 'diagBox';
+  box.style.cssText = 'position:fixed;left:0;top:0;right:0;z-index:99999;background:rgba(0,0,0,.88);color:#5f5;font:11px/1.5 monospace;padding:10px;margin:0;white-space:pre-wrap;max-height:70vh;overflow:auto;pointer-events:auto;border-bottom:2px solid #0f0';
+  document.documentElement.appendChild(box);
+  const btn = document.createElement('button');
+  btn.textContent = 'Copy';
+  btn.style.cssText = 'position:fixed;right:8px;bottom:8px;z-index:100000;padding:10px 16px;font-size:14px;background:#0f0;color:#000;border:0;border-radius:6px';
+  document.documentElement.appendChild(btn);
+  function px(v){ return typeof v === 'number' ? Math.round(v*100)/100 : v; }
+  function rectLines(sel){
+    const el = document.querySelector(sel);
+    if (!el) return [sel + ': (not found)'];
+    const r = el.getBoundingClientRect();
+    const cs = getComputedStyle(el);
+    return [
+      sel + ':',
+      '  rect  top=' + px(r.top) + ' left=' + px(r.left) + ' w=' + px(r.width) + ' h=' + px(r.height),
+      '  css   height=' + cs.height + ' width=' + cs.width + ' aspect-ratio=' + cs.aspectRatio,
+      '  css   transform=' + cs.transform,
+      '  css   padding=' + cs.padding + ' border-radius=' + cs.borderRadius
+    ];
+  }
+  function report(){
+    const vv = window.visualViewport;
+    const html = document.documentElement;
+    let lines = [
+      '=== Kimberly XV diagnostic ===',
+      'time: ' + new Date().toISOString(),
+      'UA: ' + navigator.userAgent,
+      'devicePixelRatio: ' + devicePixelRatio,
+      'screen: ' + screen.width + 'x' + screen.height + '  availW/H: ' + screen.availWidth + 'x' + screen.availHeight,
+      'window.innerWidth/Height: ' + innerWidth + 'x' + innerHeight,
+      'documentElement.clientWidth/Height: ' + html.clientWidth + 'x' + html.clientHeight,
+      'visualViewport: ' + (vv ? (px(vv.width)+'x'+px(vv.height)+' scale='+vv.scale+' offsetTop='+px(vv.offsetTop)+' offsetLeft='+px(vv.offsetLeft)) : '(unsupported)'),
+      'scrollY/X: ' + scrollY + '/' + scrollX,
+      'safe-area env(): top=' + getComputedStyle(html).getPropertyValue('--sat') + ' bottom=' + getComputedStyle(html).getPropertyValue('--sab'),
+      'orientation: ' + (screen.orientation ? screen.orientation.type : '?'),
+      '',
+      '1vh in px (innerHeight/100): ' + px(innerHeight/100),
+      '1vw in px (innerWidth/100): ' + px(innerWidth/100),
+      ''
+    ];
+    ['#intro', '.intro-grid', '.arch-wrap', '.arch', '#kiss', '#introVideo'].forEach(function(sel){
+      lines = lines.concat(rectLines(sel), '');
+    });
+    box.textContent = lines.join(String.fromCharCode(10));
+  }
+  const sat = document.createElement('style');
+  sat.textContent = ':root{--sat:env(safe-area-inset-top,0px);--sab:env(safe-area-inset-bottom,0px)}';
+  document.head.appendChild(sat);
+  report();
+  addEventListener('resize', report);
+  addEventListener('scroll', report, {passive:true});
+  addEventListener('orientationchange', function(){ setTimeout(report, 300); });
+  if (window.visualViewport) visualViewport.addEventListener('resize', report);
+  setInterval(report, 1000);
+  btn.addEventListener('click', function(){
+    if (navigator.clipboard) navigator.clipboard.writeText(box.textContent).then(
+      function(){ btn.textContent = 'Copied!'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1200); },
+      function(){ btn.textContent = 'Failed'; }
+    );
+  });
+})();
+</script>
 </body>
 </html>
