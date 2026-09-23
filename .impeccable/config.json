@@ -1,0 +1,18 @@
+{
+  "detector": {
+    "ignoreRules": [
+      "hero-eyebrow-chip",
+      "cream-palette",
+      "marquee",
+      "clipped-overflow-container",
+      "dark-glow",
+      "broken-image",
+      "buried-raster",
+      "all-caps-body",
+      "cramped-padding",
+      "layout-transition"
+    ],
+    "ignoreFiles": [],
+    "ignoreValues": []
+  }
+}

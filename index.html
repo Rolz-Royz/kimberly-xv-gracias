@@ -74,7 +74,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 .cursor,.cursor-ring{position:fixed;top:0;left:0;z-index:200;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%)}
 .cursor{width:6px;height:6px;background:var(--gold)}
 .cursor-ring{width:38px;height:38px;border:1px solid rgba(200,161,90,.7);display:grid;place-items:center;transition:width .35s var(--ease),height .35s var(--ease),background .35s,border-color .35s}
-.cursor-ring span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .2s}
+.cursor-ring span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;opacity:0;transition:opacity .2s}
 .cursor-ring.view{width:86px;height:86px;background:rgba(42,21,32,.55);border-color:transparent;backdrop-filter:blur(4px)}
 .cursor-ring.view span{opacity:1}
 @media (hover:none),(max-width:899px){.cursor,.cursor-ring{display:none}}
@@ -134,7 +134,7 @@ html[lang=en] .intro-gracias{font-size:clamp(88px,12vw,200px)}
 .bars i:nth-child(2){animation-delay:.2s}.bars i:nth-child(3){animation-delay:.4s}.bars i:nth-child(4){animation-delay:.1s}
 .muted .bars i{animation:none;height:20%}
 @keyframes bar{to{height:100%}}
-.scroll-cue{position:absolute;right:5vw;left:auto;bottom:40px;transform:none!important;z-index:4;transform:translateX(-50%);font-size:10px;letter-spacing:.4em;text-transform:uppercase;opacity:.7;display:none}
+.scroll-cue{position:absolute;right:5vw;left:auto;bottom:40px;transform:none!important;z-index:4;transform:translateX(-50%);font-size:11px;letter-spacing:.4em;text-transform:uppercase;opacity:.7;display:none}
 .scroll-cue::after{content:"";display:block;width:1px;height:38px;margin:10px auto 0;background:linear-gradient(var(--gold-hi),transparent);animation:cue 1.8s var(--ease) infinite;transform-origin:top}
 @keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
 
