@@ -36,7 +36,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 
 /* ---------- shared ---------- */
 .eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.38em;text-transform:uppercase;font-weight:400;color:var(--rosegold)}
-.script{font-family:var(--script);font-weight:400;line-height:1}
+.script{font-family:var(--script);font-weight:400;line-height:1;padding-block:.2em .12em;margin-block:-.2em -.12em}
 .gold-text{background:var(--gold-grad);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 6s linear infinite}
 @keyframes shimmer{to{background-position:-200% 0}}
 .h-display{font-family:var(--serif);font-weight:400;line-height:.95;letter-spacing:-.01em}
@@ -125,7 +125,8 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 .arch-wrap::before{content:"";position:absolute;inset:-12px;border-radius:999px 999px 34px 34px;border:1px solid rgba(241,215,154,.22)}
 .arch video,.arch img{width:100%;height:100%;object-fit:cover}
 .arch .kiss{position:absolute;inset:0;opacity:0}
-.intro-gracias{position:absolute;left:0;right:0;margin:auto;width:max-content;bottom:4vh;z-index:3;font-size:clamp(110px,15vw,250px);white-space:nowrap;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5));padding:0 .2em}
+.intro-gracias{position:absolute;left:0;right:0;margin:auto;width:max-content;bottom:calc(4vh - .12em);z-index:3;font-size:clamp(110px,15vw,250px);white-space:nowrap;filter:drop-shadow(0 10px 30px rgba(0,0,0,.5));padding:.2em .2em .12em}
+html[lang=en] .intro-gracias{font-size:clamp(88px,12vw,200px)}
 .sound{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:10px 18px;transition:background .3s}
 .sound:hover{background:rgba(255,255,255,.1)}
 .bars{display:flex;gap:2px;align-items:flex-end;height:12px}
@@ -145,7 +146,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 .letter-body .h-display{font-size:clamp(46px,5vw,86px);margin:22px 0 38px}
 .letter-text p{font-family:var(--serif);font-size:clamp(21px,1.75vw,29px);line-height:1.5;color:var(--ink);margin-bottom:.9em}
 .letter-text .w{display:inline-block;white-space:pre}
-.signature{font-size:clamp(70px,7vw,120px);color:var(--rose);margin-top:18px;display:inline-block;padding-right:.3em}
+.signature{font-size:clamp(70px,7vw,120px);color:var(--rose);margin-top:calc(18px - .2em);display:inline-block;padding-right:.3em}
 
 /* ---------- MARQUEE ---------- */
 .marquee{overflow:hidden;padding:5vh 0;background:var(--ivory);border-top:1px solid rgba(201,150,122,.25);border-bottom:1px solid rgba(201,150,122,.25)}
@@ -343,7 +344,9 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
   .intro-grid{grid-template-columns:1fr;justify-items:center;align-content:center;gap:18px;padding:70px 16px}
   .intro-side{display:none}
   .arch{height:62vh}
-  .intro-gracias{font-size:26vw;bottom:8vh}
+  .intro-gracias{font-size:26vw;bottom:calc(8vh - .12em)}
+  html[lang=en] .intro-gracias{font-size:19vw}
+  .scroll-cue{display:none!important}
   #letter{grid-template-columns:1fr;padding:12vh 16px}
   .letter-photo{height:70vh}
   .letter-photo-tag{left:10px}
@@ -417,7 +420,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
       <div class="env-back"></div>
       <div class="env-letter" id="envLetter">
         <div class="eyebrow">XV Años · 29 · 08 · 2026</div>
-        <div class="script gold-text">Gracias</div>
+        <div class="script gold-text"><span class="en">Thank you</span><span class="es">Gracias</span></div>
         <p><span class="en">for being part of my story</span><span class="es">por ser parte de mi historia</span></p>
       </div>
       <div class="env-front"></div>
@@ -470,7 +473,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
       <button class="sound" id="soundBtn"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="lbl">Sound</span></button>
     </div>
   </div>
-  <div class="intro-gracias script gold-text" id="introGracias">Gracias</div>
+  <div class="intro-gracias script gold-text" id="introGracias"><span class="en">Thank you</span><span class="es">Gracias</span></div>
   <div class="scroll-cue" id="scrollCue"><span class="en">Scroll</span><span class="es">Desliza</span></div>
 </section>
 
@@ -566,7 +569,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
     <div class="h-item" style="--h:56vh;--ar:3/2"><div class="frame"><img loading="lazy" src="img/sm/doe-532.jpg" data-full="img/doe-532.jpg" data-lb alt=""></div><div class="h-cap">13 — <span class="en">The fountain</span><span class="es">La fuente</span></div></div>
     <div class="h-item up" style="--h:66vh;--ar:2/3"><div class="frame"><img loading="lazy" src="img/sm/ed-117.jpg" data-full="img/ed-117.jpg" data-lb alt=""></div><div class="h-cap">14</div></div>
     <div class="h-outro">
-      <div class="script gold-text">fifteen</div>
+      <div class="script gold-text"><span class="en">fifteen</span><span class="es">quince</span></div>
       <div class="eyebrow" style="color:var(--gold-hi);margin-top:10px"><span class="en">and feeling like royalty</span><span class="es">y sintiéndome de la realeza</span></div>
     </div>
   </div>
@@ -768,6 +771,10 @@ function setLang(l) {
   root.lang = l;
   $$('.lang button').forEach(b => b.classList.toggle('on', b.dataset.lang === l));
   try { localStorage.setItem('kxv-lang', l); } catch (e) {}
+  if (window.gsap) {
+    const g = document.getElementById('introGracias');
+    if (g && g.dataset.written) gsap.set(g, { clipPath: 'inset(0 0% 0 0)' });
+  }
   if (window.ScrollTrigger) requestAnimationFrame(() => ScrollTrigger.refresh());
 }
 let saved = null; try { saved = localStorage.getItem('kxv-lang'); } catch (e) {}
@@ -904,7 +911,7 @@ function openEnvelope() {
     .add(() => { $('#gate').remove(); document.body.classList.remove('locked'); lenis && lenis.start(); ScrollTrigger.refresh(); playIntro(); paintMusicBtn(); }, 3.6)
     .to('#intro .arch-wrap', { opacity: 1, scale: 1, y: 0, duration: 1.6, ease: 'expo.out' }, 3.3)
     .to('.intro-side > *', { opacity: 1, y: 0, duration: 1.2, stagger: .12, ease: 'power3.out' }, 3.8)
-    .to('#introGracias', { clipPath: 'inset(0 0% 0 0)', duration: 2.4, ease: 'power2.inOut' }, 4.3)
+    .to('#introGracias', { clipPath: 'inset(0 0% 0 0)', duration: 2.4, ease: 'power2.inOut', onComplete: () => { $('#introGracias').dataset.written = '1'; } }, 4.3)
     .add(() => { $('#scrollCue').style.display = 'block'; gsap.from('#scrollCue', { opacity: 0, duration: 1 }); sparkleBoost = 1.3; }, 6.2);
 }
 
