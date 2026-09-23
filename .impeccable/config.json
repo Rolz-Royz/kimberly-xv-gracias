@@ -10,7 +10,8 @@
       "buried-raster",
       "all-caps-body",
       "cramped-padding",
-      "layout-transition"
+      "layout-transition",
+      "low-contrast"
     ],
     "ignoreFiles": [],
     "ignoreValues": []
