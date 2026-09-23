@@ -121,7 +121,7 @@ html[lang=en] .es, html[lang=es] .en{display:none!important}
 .intro-side .h-display{font-size:clamp(34px,3.6vw,62px)}
 .intro-side .h-display em{color:var(--gold-hi)}
 .arch{position:relative;height:min(76vh,860px);height:min(76dvh,860px);aspect-ratio:9/16;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 50px 120px rgba(0,0,0,.55)}
-.arch-wrap{position:relative;width:-moz-fit-content;width:fit-content;padding:12px;border-radius:999px 999px 26px 26px;border:1px solid rgba(241,215,154,.55)}
+.arch-wrap{position:relative;box-sizing:border-box;width:-moz-fit-content;width:fit-content;width:calc(min(76vh,860px) * 9 / 16 + 26px);width:calc(min(76dvh,860px) * 9 / 16 + 26px);padding:12px;border-radius:999px 999px 26px 26px;border:1px solid rgba(241,215,154,.55)}
 .arch-wrap::before{content:"";position:absolute;inset:-12px;border-radius:999px 999px 34px 34px;border:1px solid rgba(241,215,154,.22)}
 .arch video,.arch img{width:100%;height:100%;object-fit:cover}
 .arch .kiss{position:absolute;inset:0;opacity:0}
@@ -345,6 +345,7 @@ html[lang=en] .intro-gracias{font-size:clamp(88px,12vw,200px)}
   .intro-side{display:none}
   .arch-motion,.arch-wrap{margin-left:auto!important;margin-right:auto!important;justify-self:center!important}
   .arch{height:62vh;height:62dvh}
+  .arch-wrap{width:calc(62vh * 9 / 16 + 26px);width:calc(62dvh * 9 / 16 + 26px)}
   .intro-gracias{font-size:26vw;bottom:calc(8vh - .12em);bottom:calc(8dvh - .12em)}
   html[lang=en] .intro-gracias{font-size:19vw}
   .scroll-cue{display:none!important}
