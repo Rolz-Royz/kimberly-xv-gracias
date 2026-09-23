@@ -839,15 +839,33 @@ function updateSound() {
 }
 soundBtn.addEventListener('click', toggleMusic);
 updateSound();
+let introFailsafe = null, introFinished = false;
+function finishIntro() {
+  if (introFinished) return; introFinished = true;
+  clearTimeout(introFailsafe);
+  video.pause();
+  if (hasGsap) gsap.to('#kiss', { opacity: 1, duration: 1.2, ease: 'power2.out' }); else $('#kiss').style.opacity = 1;
+  // belt and suspenders: if the video stalled mid-frame on some device, make
+  // sure that frozen frame can never show through the (same-size) kiss image.
+  setTimeout(() => { video.style.visibility = 'hidden'; }, 1300);
+}
 function playIntro() {
-  video.currentTime = 0;
+  video.currentTime = 0; introFinished = false; video.style.visibility = '';
   if (hasGsap) gsap.to('#kiss', { opacity: 0, duration: .4 });
   const p = video.play();
   if (p && p.catch) p.catch(() => {});
+  // Safety net: on some devices the video can stall mid-playback and never
+  // fire 'ended' (seen on iPhone 17 Pro Max), leaving the intro stuck on
+  // whatever random frame it froze on instead of the composed ending pose.
+  // Whatever happens, force the transition once the clip should be long done.
+  clearTimeout(introFailsafe);
+  const dur = (video.duration && isFinite(video.duration)) ? video.duration : 7;
+  introFailsafe = setTimeout(finishIntro, (dur + 2.5) * 1000);
 }
-video.addEventListener('ended', () => {
-  if (hasGsap) gsap.to('#kiss', { opacity: 1, duration: 1.2, ease: 'power2.out' }); else $('#kiss').style.opacity = 1;
-});
+video.addEventListener('ended', finishIntro);
+video.addEventListener('error', finishIntro);
+video.addEventListener('stalled', () => { clearTimeout(introFailsafe); introFailsafe = setTimeout(finishIntro, 4000); });
+video.addEventListener('waiting', () => { clearTimeout(introFailsafe); introFailsafe = setTimeout(finishIntro, 4000); });
 
 /* ---------- no-GSAP fallback ---------- */
 if (!hasGsap) {
